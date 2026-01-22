@@ -1,0 +1,9 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="TP_Connector.Properties" GeneratedClassName="Settings">
+  <Profiles />
+  <Settings>
+    <Setting Name="TP_Connector_com_teamplus9_AddinImplService" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://teamplus9.com:8080/services/AddinIF</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>
