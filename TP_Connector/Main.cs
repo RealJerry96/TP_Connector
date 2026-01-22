@@ -8,6 +8,7 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Windows.Forms;
+using DevExpress.XtraTreeList; // TreeList 관련 네임스페이스 추가
 using static TP_Connector.common;
 
 namespace TP_Connector
@@ -23,6 +24,9 @@ namespace TP_Connector
         private DevExpress.XtraBars.BarStaticItem toolStripUserName;
         private DevExpress.XtraEditors.LabelControl LoginUserLabel;
 
+        // 현재 검색어를 저장하는 변수
+        private string _currentSearchText = string.Empty;
+
         public Main()
         {
             InitializeComponent();
@@ -36,51 +40,48 @@ namespace TP_Connector
                 this.barLabel.Caption = $"{GlobalClientService.userInfo.userNm}({GlobalClientService.userInfo.userId}) 님이 로그인 하였습니다.";
             }
 
+            // 1. 스플리터 디자인(Paint 이벤트) 연결 - 두 탭 모두 적용
+            this.splitContainerControl1.Paint += SplitContainerControl_Paint;
+            this.splitContainerControl2.Paint += SplitContainerControl_Paint;
 
-
-
-
-
-
-            // 스플리터를 얇게 그리기 위한 Paint 이벤트 처리기 추가
-            this.splitContainerControl1.Paint += (s, e) =>
-            {
-                DevExpress.XtraEditors.SplitContainerControl control = s as DevExpress.XtraEditors.SplitContainerControl;
-                if (control != null)
-                {
-                    // 1. 스플리터의 전체 영역을 가져옵니다 (보통 5~6px 정도 됨)
-                    Rectangle r = control.SplitterBounds;
-
-                    // 2. 그릴 두께 설정 (1px)
-                    int lineThickness = 4;
-
-                    // 3. 전체 영역의 정중앙에 1px 짜리 선이 오도록 좌표(X)와 너비(Width)를 조정
-                    r.X += (r.Width - lineThickness) / 2;
-                    r.Width = lineThickness;
-
-                    // 4. 조정된 얇은 영역에만 색칠
-                    // (Color.Silver나 Color.LightGray 추천)
-                    using (Brush brush = new SolidBrush(Color.LightGray))
-                    {
-                        e.Graphics.FillRectangle(brush, r);
-                    }
-                }
-            };
-
+            // 2. 시스템 폴더 데이터 초기화 (두 트리 모두 바인딩)
             InitSystemFolder();
 
-            // 검색어 하이라이트를 위한 이벤트 등록
+            // 3. 검색어 하이라이트 이벤트 연결 - 두 트리 모두 적용
             tlFolder.CustomDrawNodeCell += TlFolder_CustomDrawNodeCell;
+            tlFolder2.CustomDrawNodeCell += TlFolder_CustomDrawNodeCell;
+
+            // (참고) 만약 tlData 클릭 이벤트 등 추가 로직이 생긴다면 여기서 tlData2에도 똑같이 연결해주면 됩니다.
         }
 
-        
+        #region 스플리터 디자인 (공통 이벤트 핸들러)
+        private void SplitContainerControl_Paint(object sender, PaintEventArgs e)
+        {
+            DevExpress.XtraEditors.SplitContainerControl control = sender as DevExpress.XtraEditors.SplitContainerControl;
+            if (control != null)
+            {
+                // 1. 스플리터의 전체 영역을 가져옵니다
+                Rectangle r = control.SplitterBounds;
 
+                // 2. 그릴 두께 설정 (4px)
+                int lineThickness = 4;
 
+                // 3. 전체 영역의 정중앙에 선이 오도록 좌표 조정
+                r.X += (r.Width - lineThickness) / 2;
+                r.Width = lineThickness;
+
+                // 4. 조정된 영역에 색칠
+                using (Brush brush = new SolidBrush(Color.LightGray))
+                {
+                    e.Graphics.FillRectangle(brush, r);
+                }
+            }
+        }
+        #endregion
 
         #region 폴더 트리 초기화 및 검색 기능
         private void InitSystemFolder()
         {
-
             var folderSearchTO = new AddInWebService.folderSearchTO();
             var pagingSearchTO = new AddInWebService.pagingSearchTO();
 
@@ -99,35 +100,41 @@ namespace TP_Connector
             {
                 var folderList = common.m_intf.getFolderList(folderSearchTO, pagingSearchTO);
 
-                tlFolder.BeginUpdate();
-                try
-                {
-                    tlFolder.DataSource = folderList;
-                    tlFolder.KeyFieldName = "fldSeq";
-                    tlFolder.ParentFieldName = "parFldSeq";
-                    colFolder.FieldName = "fldNm";
+                // 탭1 트리 설정
+                BindDataToTree(tlFolder, colFolder, folderList);
 
-                    SetTreeListIcon();
+                // 탭2 트리 설정 (동일한 데이터 바인딩)
+                BindDataToTree(tlFolder2, colFolder2, folderList);
 
-                    tlFolder.ForceInitialize();
-                    tlFolder.ExpandToLevel(0);
-                }
-                finally
-                {
-                    tlFolder.EndUpdate();
-                    //스크롤 가장 위로가게끔
-                    tlFolder.TopVisibleNodeIndex = 0;
-                }
+                SetTreeListIcon(tlFolder);
+                SetTreeListIcon(tlFolder2);
             }
         }
 
-
-
-
-
-        private void SetTreeListIcon()
+        // 중복 코드를 줄이기 위한 바인딩 헬퍼 함수
+        private void BindDataToTree(DevExpress.XtraTreeList.TreeList tree, DevExpress.XtraTreeList.Columns.TreeListColumn col, object dataSource)
         {
-            if (tlFolder.SelectImageList != null) return;
+            tree.BeginUpdate();
+            try
+            {
+                tree.DataSource = dataSource;
+                tree.KeyFieldName = "fldSeq";
+                tree.ParentFieldName = "parFldSeq";
+                col.FieldName = "fldNm";
+
+                tree.ForceInitialize();
+                tree.ExpandToLevel(0);
+                tree.TopVisibleNodeIndex = 0;
+            }
+            finally
+            {
+                tree.EndUpdate();
+            }
+        }
+
+        private void SetTreeListIcon(DevExpress.XtraTreeList.TreeList tree)
+        {
+            if (tree.SelectImageList != null) return;
 
             ImageList imgList = new ImageList();
             imgList.ImageSize = new Size(16, 16);
@@ -142,106 +149,101 @@ namespace TP_Connector
             }
             imgList.Images.Add(folderIcon);
 
-            tlFolder.SelectImageList = imgList;
-            tlFolder.GetSelectImage += (s, e) => { e.NodeImageIndex = 0; };
+            tree.SelectImageList = imgList;
+            tree.GetSelectImage += (s, e) => { e.NodeImageIndex = 0; };
         }
-
-
-
-
-
-        
 
         private void folderSearchButton_Click(object sender, EventArgs e)
         {
-            // 이미 열려 있다면 닫고 새로 열거나, 혹은 그냥 포커스만 줄 수도 있음
             if (m_FolderSearchForm != null && !m_FolderSearchForm.IsDisposed)
             {
                 m_FolderSearchForm.Close();
             }
 
             m_FolderSearchForm = new FolderSearch();
-
-            // 메인 폼 위에 뜨도록 Owner 설정
             m_FolderSearchForm.Show(this);
         }
 
         /// <summary>
-        /// 폴더명으로 트리의 노드를 검색하고 포커스 및 선택 처리합니다.
-        /// (다음 찾기 기능 포함: 계속 호출 시 순환하며 다음 항목을 찾습니다.)
+        /// 현재 활성화된 탭의 트리를 대상으로 검색을 수행합니다.
         /// </summary>
-        /// <param name="searchText">검색할 폴더명</param>
-        // void 에서 (int current, int total) 튜플 반환형으로 변경
         public (int current, int total) SearchAndFocusFolder(string searchText)
         {
             if (string.IsNullOrEmpty(searchText)) return (0, 0);
 
-            _currentSearchText = searchText; // 현재 검색어 저장
-            tlFolder.Invalidate(); // 검색어가 변경되었으므로 즉시 다시 그리기 요청
+            _currentSearchText = searchText;
 
-            // 1. 트리 내 모든 노드를 순서대로 가져오기 (탐색 순서 정렬)
-            var allNodes = GetAllNodesInOrder(tlFolder.Nodes);
+            // 현재 활성화된 탭에 따라 검색 대상 트리와 컬럼 결정
+            DevExpress.XtraTreeList.TreeList targetTree;
+            DevExpress.XtraTreeList.Columns.TreeListColumn targetCol;
 
-            // 2. 검색어가 포함된 모든 노드를 필터링
+            if (this.tabFormControl1.SelectedPage == this.tabFormPage2) // 신규등록 탭
+            {
+                targetTree = tlFolder2;
+                targetCol = colFolder2;
+            }
+            else // 기본 탭 (체크인/체크아웃)
+            {
+                targetTree = tlFolder;
+                targetCol = colFolder;
+            }
+
+            targetTree.Invalidate(); // 다시 그리기 (하이라이트 적용)
+
+            // 1. 트리 내 모든 노드 수집
+            var allNodes = GetAllNodesInOrder(targetTree.Nodes);
+
+            // 2. 검색어 매칭 노드 필터링
             var matches = allNodes.Where(node =>
-                node.GetDisplayText(colFolder).IndexOf(searchText, StringComparison.OrdinalIgnoreCase) >= 0
+                node.GetDisplayText(targetCol).IndexOf(searchText, StringComparison.OrdinalIgnoreCase) >= 0
             ).ToList();
 
             if (matches.Count == 0)
             {
                 XtraMessageBox.Show($"'{searchText}' 폴더를 찾을 수 없습니다.", "검색 결과", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                return (0, 0); // 검색 결과 없음 반환
+                return (0, 0);
             }
 
-            DevExpress.XtraTreeList.Nodes.TreeListNode targetNode = null;
+            DevExpress.XtraTreeList.Nodes.TreeListNode resultNode = null;
 
-            // 3. 현재 포커스된 노드 기준으로 '다음' 매칭 노드 찾기
-            if (tlFolder.FocusedNode != null)
+            // 3. 다음 찾기 로직
+            if (targetTree.FocusedNode != null)
             {
-                // 현재 포커스된 노드가 매칭 리스트에 있는지 확인
-                int currentMatchIndex = matches.IndexOf(tlFolder.FocusedNode);
+                int currentMatchIndex = matches.IndexOf(targetTree.FocusedNode);
 
                 if (currentMatchIndex >= 0)
                 {
-                    // (A) 현재 노드가 검색 결과 중 하나라면 -> 다음 인덱스 노드 선택 (마지막이면 처음으로 순환)
+                    // 현재 노드가 매칭된 노드라면 다음 노드로 이동 (순환)
                     int nextIndex = (currentMatchIndex + 1) % matches.Count;
-                    targetNode = matches[nextIndex];
+                    resultNode = matches[nextIndex];
                 }
                 else
                 {
-                    // (B) 현재 노드가 검색 결과가 아니라면 (사용자가 임의로 다른 곳을 클릭한 경우)
-                    //     전체 노드 순서상 현재 노드보다 '뒤에' 있는 첫 번째 매칭 노드를 찾음
-                    int currentFullIndex = allNodes.IndexOf(tlFolder.FocusedNode);
+                    // 현재 노드가 매칭 노드가 아니라면, 현재 위치 이후의 첫 매칭 노드 검색
+                    int currentFullIndex = allNodes.IndexOf(targetTree.FocusedNode);
+                    resultNode = matches.FirstOrDefault(m => allNodes.IndexOf(m) > currentFullIndex);
 
-                    // 현재 위치보다 뒤에 있는 매칭 결과 찾기
-                    targetNode = matches.FirstOrDefault(m => allNodes.IndexOf(m) > currentFullIndex);
-
-                    // 뒤에 없으면 다시 처음부터 찾음 (순환)
-                    if (targetNode == null)
-                        targetNode = matches[0];
+                    // 없으면 처음부터
+                    if (resultNode == null)
+                        resultNode = matches[0];
                 }
             }
             else
             {
-                // 4. 아무것도 선택되어 있지 않다면 첫 번째 결과 선택
-                targetNode = matches[0];
+                resultNode = matches[0];
             }
 
-            // 5. 노드 포커싱 및 화면 표시
-            if (targetNode != null)
+            // 4. 포커스 이동
+            if (resultNode != null)
             {
-                tlFolder.FocusedNode = targetNode;
-                tlFolder.Selection.Set(targetNode);
-                tlFolder.MakeNodeVisible(targetNode);
+                targetTree.FocusedNode = resultNode;
+                targetTree.Selection.Set(resultNode);
+                targetTree.MakeNodeVisible(resultNode);
             }
 
-            // 현재 찾은 항목의 인덱스(1부터 시작)와 전체 검색 개수를 반환합니다.
-            return (matches.IndexOf(targetNode) + 1, matches.Count);
+            return (matches.IndexOf(resultNode) + 1, matches.Count);
         }
 
-        /// <summary>
-        /// 트리 리스트의 모든 노드를 화면 표시 순서(논리적 순서)대로 수집합니다.
-        /// </summary>
         private List<DevExpress.XtraTreeList.Nodes.TreeListNode> GetAllNodesInOrder(DevExpress.XtraTreeList.Nodes.TreeListNodes nodes)
         {
             var list = new List<DevExpress.XtraTreeList.Nodes.TreeListNode>();
@@ -264,13 +266,12 @@ namespace TP_Connector
             }
         }
 
-        private string _currentSearchText = string.Empty;
-
         private void TlFolder_CustomDrawNodeCell(object sender, DevExpress.XtraTreeList.CustomDrawNodeCellEventArgs e)
         {
             if (string.IsNullOrEmpty(_currentSearchText)) return;
-            // colFolder 컬럼에서만 하이라이트 (필요 시 다른 컬럼도 포함 가능)
-            if (e.Column != colFolder) return;
+
+            // 현재 그려지는 컬럼이 폴더명 컬럼인지 확인 (탭1의 컬럼 또는 탭2의 컬럼)
+            if (e.Column != colFolder && e.Column != colFolder2) return;
 
             string text = e.CellText;
             if (string.IsNullOrEmpty(text)) return;
@@ -280,41 +281,33 @@ namespace TP_Connector
             {
                 e.Handled = true;
 
-                // 1. 배경 그리기 (선택, 포커스 등 기본 배경)
+                // 1. 배경 그리기
                 e.Appearance.DrawBackground(e.Cache, e.Bounds);
 
-                // 2. 하이라이트 영역 계산 및 그리기
-                // GetStringFormat()으로 가져온 객체의 원본을 보호하기 위해 Clone()을 사용합니다.
+                // 2. 하이라이트 그리기
                 using (StringFormat sf = (StringFormat)e.Appearance.GetStringFormat().Clone())
                 {
                     CharacterRange[] ranges = { new CharacterRange(index, _currentSearchText.Length) };
                     sf.SetMeasurableCharacterRanges(ranges);
 
-                    // GDI+ 측정
                     Region[] regions = e.Graphics.MeasureCharacterRanges(text, e.Appearance.Font, e.Bounds, sf);
                     if (regions.Length > 0)
                     {
                         RectangleF highlightRect = regions[0].GetBounds(e.Graphics);
-                        // 노란색 배경 칠하기
                         e.Graphics.FillRectangle(Brushes.Yellow, highlightRect);
                     }
 
-                    // 3. 텍스트 그리기 
-                    // 수정됨: e.Appearance.DrawString 대신 e.Graphics.DrawString을 사용하여
-                    // 측정에 사용된 StringFormat(sf)과 동일한 기준으로 텍스트를 그립니다.
-                    // 이렇게 해야 배경 위치와 글자 위치가 정확히 일치합니다.
+                    // 3. 텍스트 그리기
                     using (Brush textBrush = new SolidBrush(e.Appearance.ForeColor))
                     {
                         e.Graphics.DrawString(text, e.Appearance.Font, textBrush, e.Bounds, sf);
-                        
-                        
                     }
                 }
             }
         }
         #endregion
 
-        //탭관련 기본임
+        // 탭 폼 기본 설정
         void OnOuterFormCreating(object sender, OuterFormCreatingEventArgs e)
         {
             Main form = new Main();
@@ -324,5 +317,16 @@ namespace TP_Connector
         }
 
         static int OpenFormCount = 1;
+
+
+
+        #region 두번째 탭 기능 구현
+        private void btnConfirm_Click(object sender, EventArgs e)
+        {
+
+
+        }
+
+        #endregion
     }
 }
