@@ -29,6 +29,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Main));
             this.tabFormControl1 = new DevExpress.XtraBars.TabFormControl();
             this.barLabel = new DevExpress.XtraBars.BarStaticItem();
@@ -60,15 +61,17 @@
             this.colFolder2 = new DevExpress.XtraTreeList.Columns.TreeListColumn();
             this.pnlSystemHeader2 = new DevExpress.XtraEditors.PanelControl();
             this.lblSystemTitle2 = new DevExpress.XtraEditors.LabelControl();
-            this.tlData2 = new DevExpress.XtraTreeList.TreeList();
-            this.colName2 = new DevExpress.XtraTreeList.Columns.TreeListColumn();
-            this.colVersion2 = new DevExpress.XtraTreeList.Columns.TreeListColumn();
-            this.colGrade2 = new DevExpress.XtraTreeList.Columns.TreeListColumn();
+            this.newAddGrid = new DevExpress.XtraTreeList.TreeList();
+            this.newAddObjNm = new DevExpress.XtraTreeList.Columns.TreeListColumn();
+            this.newAddVersion = new DevExpress.XtraTreeList.Columns.TreeListColumn();
+            this.newAddObjState = new DevExpress.XtraTreeList.Columns.TreeListColumn();
             this.pnlTopMenu2 = new DevExpress.XtraEditors.PanelControl();
-            this.btnConfirm = new DevExpress.XtraEditors.SimpleButton();
-            this.btnRefresh2 = new DevExpress.XtraEditors.SimpleButton();
             this.separatorControl1 = new DevExpress.XtraEditors.SeparatorControl();
             this.simpleButton1 = new DevExpress.XtraEditors.SimpleButton();
+            this.btnConfirm = new DevExpress.XtraEditors.SimpleButton();
+            this.btnRefresh2 = new DevExpress.XtraEditors.SimpleButton();
+            this.behaviorManager1 = new DevExpress.Utils.Behaviors.BehaviorManager(this.components);
+            this.simpleButton2 = new DevExpress.XtraEditors.SimpleButton();
             ((System.ComponentModel.ISupportInitialize)(this.tabFormControl1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tabFormDefaultManager1)).BeginInit();
             this.tabFormContentContainer1.SuspendLayout();
@@ -94,10 +97,11 @@
             ((System.ComponentModel.ISupportInitialize)(this.tlFolder2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pnlSystemHeader2)).BeginInit();
             this.pnlSystemHeader2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.tlData2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.newAddGrid)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pnlTopMenu2)).BeginInit();
             this.pnlTopMenu2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.separatorControl1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.behaviorManager1)).BeginInit();
             this.SuspendLayout();
             // 
             // tabFormControl1
@@ -110,7 +114,7 @@
             this.tabFormControl1.Name = "tabFormControl1";
             this.tabFormControl1.Pages.Add(this.tabFormPage1);
             this.tabFormControl1.Pages.Add(this.tabFormPage2);
-            this.tabFormControl1.SelectedPage = this.tabFormPage2;
+            this.tabFormControl1.SelectedPage = this.tabFormPage1;
             this.tabFormControl1.Size = new System.Drawing.Size(1106, 72);
             this.tabFormControl1.TabForm = this;
             this.tabFormControl1.TabIndex = 0;
@@ -354,6 +358,7 @@
             // pnlTopMenu
             // 
             this.pnlTopMenu.Controls.Add(this.btnRun);
+            this.pnlTopMenu.Controls.Add(this.simpleButton2);
             this.pnlTopMenu.Controls.Add(this.btnCheckIn);
             this.pnlTopMenu.Controls.Add(this.btnRefresh);
             this.pnlTopMenu.Dock = System.Windows.Forms.DockStyle.Top;
@@ -367,12 +372,13 @@
             this.btnRun.ImageOptions.ImageToTextAlignment = DevExpress.XtraEditors.ImageAlignToText.TopCenter;
             this.btnRun.ImageOptions.Location = DevExpress.XtraEditors.ImageLocation.TopCenter;
             this.btnRun.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("btnRun.ImageOptions.SvgImage")));
-            this.btnRun.Location = new System.Drawing.Point(156, 3);
+            this.btnRun.Location = new System.Drawing.Point(229, 4);
             this.btnRun.Name = "btnRun";
             this.btnRun.PaintStyle = DevExpress.XtraEditors.Controls.PaintStyles.Light;
             this.btnRun.Size = new System.Drawing.Size(70, 75);
             this.btnRun.TabIndex = 4;
             this.btnRun.Text = "프로그램\r\n실행";
+            this.btnRun.Click += new System.EventHandler(this.btnRun_Click);
             // 
             // btnCheckIn
             // 
@@ -436,7 +442,7 @@
             // 
             // splitContainerControl2.Panel2
             // 
-            this.splitContainerControl2.Panel2.Controls.Add(this.tlData2);
+            this.splitContainerControl2.Panel2.Controls.Add(this.newAddGrid);
             this.splitContainerControl2.Panel2.Controls.Add(this.pnlTopMenu2);
             this.splitContainerControl2.Panel2.Text = "Panel2";
             this.splitContainerControl2.ShowSplitGlyph = DevExpress.Utils.DefaultBoolean.True;
@@ -503,68 +509,70 @@
             this.lblSystemTitle2.TabIndex = 0;
             this.lblSystemTitle2.Text = "신규등록";
             // 
-            // tlData2
+            // newAddGrid
             // 
-            this.tlData2.AllowDrop = true;
-            this.tlData2.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
-            this.tlData2.Columns.AddRange(new DevExpress.XtraTreeList.Columns.TreeListColumn[] {
-            this.colName2,
-            this.colVersion2,
-            this.colGrade2});
-            this.tlData2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tlData2.Location = new System.Drawing.Point(0, 85);
-            this.tlData2.Name = "tlData2";
-            this.tlData2.Size = new System.Drawing.Size(824, 408);
-            this.tlData2.TabIndex = 1;
+            this.newAddGrid.AllowDrop = true;
+            this.newAddGrid.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
+            this.newAddGrid.Columns.AddRange(new DevExpress.XtraTreeList.Columns.TreeListColumn[] {
+            this.newAddObjNm,
+            this.newAddVersion,
+            this.newAddObjState});
+            this.newAddGrid.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.newAddGrid.Location = new System.Drawing.Point(0, 85);
+            this.newAddGrid.Name = "newAddGrid";
+            this.newAddGrid.Size = new System.Drawing.Size(824, 408);
+            this.newAddGrid.TabIndex = 1;
+            this.newAddGrid.DragDrop += new System.Windows.Forms.DragEventHandler(this.newAddGrid_DragDrop);
+            this.newAddGrid.DragEnter += new System.Windows.Forms.DragEventHandler(this.newAddGrid_DragEnter);
             // 
-            // colName2
+            // newAddObjNm
             // 
-            this.colName2.AppearanceHeader.BackColor = System.Drawing.Color.White;
-            this.colName2.AppearanceHeader.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold);
-            this.colName2.AppearanceHeader.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.colName2.AppearanceHeader.Options.UseBackColor = true;
-            this.colName2.AppearanceHeader.Options.UseFont = true;
-            this.colName2.AppearanceHeader.Options.UseForeColor = true;
-            this.colName2.Caption = "자료명";
-            this.colName2.FieldName = "Name";
-            this.colName2.Name = "colName2";
-            this.colName2.Visible = true;
-            this.colName2.VisibleIndex = 0;
-            this.colName2.Width = 300;
+            this.newAddObjNm.AppearanceHeader.BackColor = System.Drawing.Color.White;
+            this.newAddObjNm.AppearanceHeader.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold);
+            this.newAddObjNm.AppearanceHeader.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.newAddObjNm.AppearanceHeader.Options.UseBackColor = true;
+            this.newAddObjNm.AppearanceHeader.Options.UseFont = true;
+            this.newAddObjNm.AppearanceHeader.Options.UseForeColor = true;
+            this.newAddObjNm.Caption = "자료명";
+            this.newAddObjNm.FieldName = "Name";
+            this.newAddObjNm.Name = "newAddObjNm";
+            this.newAddObjNm.Visible = true;
+            this.newAddObjNm.VisibleIndex = 0;
+            this.newAddObjNm.Width = 406;
             // 
-            // colVersion2
+            // newAddVersion
             // 
-            this.colVersion2.AppearanceCell.Options.UseTextOptions = true;
-            this.colVersion2.AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
-            this.colVersion2.AppearanceHeader.BackColor = System.Drawing.Color.White;
-            this.colVersion2.AppearanceHeader.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold);
-            this.colVersion2.AppearanceHeader.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.colVersion2.AppearanceHeader.Options.UseBackColor = true;
-            this.colVersion2.AppearanceHeader.Options.UseFont = true;
-            this.colVersion2.AppearanceHeader.Options.UseForeColor = true;
-            this.colVersion2.Caption = "버전";
-            this.colVersion2.FieldName = "Version";
-            this.colVersion2.Name = "colVersion2";
-            this.colVersion2.Visible = true;
-            this.colVersion2.VisibleIndex = 1;
-            this.colVersion2.Width = 80;
+            this.newAddVersion.AppearanceCell.Options.UseTextOptions = true;
+            this.newAddVersion.AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.newAddVersion.AppearanceHeader.BackColor = System.Drawing.Color.White;
+            this.newAddVersion.AppearanceHeader.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold);
+            this.newAddVersion.AppearanceHeader.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.newAddVersion.AppearanceHeader.Options.UseBackColor = true;
+            this.newAddVersion.AppearanceHeader.Options.UseFont = true;
+            this.newAddVersion.AppearanceHeader.Options.UseForeColor = true;
+            this.newAddVersion.Caption = "버전";
+            this.newAddVersion.FieldName = "Version";
+            this.newAddVersion.Name = "newAddVersion";
+            this.newAddVersion.Visible = true;
+            this.newAddVersion.VisibleIndex = 1;
+            this.newAddVersion.Width = 198;
             // 
-            // colGrade2
+            // newAddObjState
             // 
-            this.colGrade2.AppearanceCell.Options.UseTextOptions = true;
-            this.colGrade2.AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
-            this.colGrade2.AppearanceHeader.BackColor = System.Drawing.Color.White;
-            this.colGrade2.AppearanceHeader.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold);
-            this.colGrade2.AppearanceHeader.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.colGrade2.AppearanceHeader.Options.UseBackColor = true;
-            this.colGrade2.AppearanceHeader.Options.UseFont = true;
-            this.colGrade2.AppearanceHeader.Options.UseForeColor = true;
-            this.colGrade2.Caption = "등급";
-            this.colGrade2.FieldName = "Grade";
-            this.colGrade2.Name = "colGrade2";
-            this.colGrade2.Visible = true;
-            this.colGrade2.VisibleIndex = 2;
-            this.colGrade2.Width = 80;
+            this.newAddObjState.AppearanceCell.Options.UseTextOptions = true;
+            this.newAddObjState.AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
+            this.newAddObjState.AppearanceHeader.BackColor = System.Drawing.Color.White;
+            this.newAddObjState.AppearanceHeader.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold);
+            this.newAddObjState.AppearanceHeader.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.newAddObjState.AppearanceHeader.Options.UseBackColor = true;
+            this.newAddObjState.AppearanceHeader.Options.UseFont = true;
+            this.newAddObjState.AppearanceHeader.Options.UseForeColor = true;
+            this.newAddObjState.Caption = "등급";
+            this.newAddObjState.FieldName = "Grade";
+            this.newAddObjState.Name = "newAddObjState";
+            this.newAddObjState.Visible = true;
+            this.newAddObjState.VisibleIndex = 2;
+            this.newAddObjState.Width = 197;
             // 
             // pnlTopMenu2
             // 
@@ -578,11 +586,31 @@
             this.pnlTopMenu2.Size = new System.Drawing.Size(824, 85);
             this.pnlTopMenu2.TabIndex = 0;
             // 
+            // separatorControl1
+            // 
+            this.separatorControl1.LineOrientation = System.Windows.Forms.Orientation.Vertical;
+            this.separatorControl1.Location = new System.Drawing.Point(156, 2);
+            this.separatorControl1.Name = "separatorControl1";
+            this.separatorControl1.Size = new System.Drawing.Size(20, 82);
+            this.separatorControl1.TabIndex = 4;
+            // 
+            // simpleButton1
+            // 
+            this.simpleButton1.ImageOptions.ImageToTextAlignment = DevExpress.XtraEditors.ImageAlignToText.TopCenter;
+            this.simpleButton1.ImageOptions.Location = DevExpress.XtraEditors.ImageLocation.TopCenter;
+            this.simpleButton1.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("simpleButton1.ImageOptions.SvgImage")));
+            this.simpleButton1.Location = new System.Drawing.Point(182, 5);
+            this.simpleButton1.Name = "simpleButton1";
+            this.simpleButton1.PaintStyle = DevExpress.XtraEditors.Controls.PaintStyles.Light;
+            this.simpleButton1.Size = new System.Drawing.Size(70, 75);
+            this.simpleButton1.TabIndex = 4;
+            this.simpleButton1.Text = "업로드확정";
+            // 
             // btnConfirm
             // 
             this.btnConfirm.ImageOptions.ImageToTextAlignment = DevExpress.XtraEditors.ImageAlignToText.TopCenter;
             this.btnConfirm.ImageOptions.Location = DevExpress.XtraEditors.ImageLocation.TopCenter;
-            this.btnConfirm.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("btnCheckIn2.ImageOptions.SvgImage")));
+            this.btnConfirm.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("btnConfirm.ImageOptions.SvgImage")));
             this.btnConfirm.Location = new System.Drawing.Point(80, 4);
             this.btnConfirm.Name = "btnConfirm";
             this.btnConfirm.PaintStyle = DevExpress.XtraEditors.Controls.PaintStyles.Light;
@@ -605,25 +633,17 @@
             this.btnRefresh2.TabIndex = 2;
             this.btnRefresh2.Text = "새로\r\n고침";
             // 
-            // separatorControl1
+            // simpleButton2
             // 
-            this.separatorControl1.LineOrientation = System.Windows.Forms.Orientation.Vertical;
-            this.separatorControl1.Location = new System.Drawing.Point(156, 2);
-            this.separatorControl1.Name = "separatorControl1";
-            this.separatorControl1.Size = new System.Drawing.Size(20, 82);
-            this.separatorControl1.TabIndex = 4;
-            // 
-            // simpleButton1
-            // 
-            this.simpleButton1.ImageOptions.ImageToTextAlignment = DevExpress.XtraEditors.ImageAlignToText.TopCenter;
-            this.simpleButton1.ImageOptions.Location = DevExpress.XtraEditors.ImageLocation.TopCenter;
-            this.simpleButton1.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("simpleButton1.ImageOptions.SvgImage")));
-            this.simpleButton1.Location = new System.Drawing.Point(182, 5);
-            this.simpleButton1.Name = "simpleButton1";
-            this.simpleButton1.PaintStyle = DevExpress.XtraEditors.Controls.PaintStyles.Light;
-            this.simpleButton1.Size = new System.Drawing.Size(70, 75);
-            this.simpleButton1.TabIndex = 4;
-            this.simpleButton1.Text = "업로드확정";
+            this.simpleButton2.ImageOptions.ImageToTextAlignment = DevExpress.XtraEditors.ImageAlignToText.TopCenter;
+            this.simpleButton2.ImageOptions.Location = DevExpress.XtraEditors.ImageLocation.TopCenter;
+            this.simpleButton2.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("simpleButton2.ImageOptions.SvgImage")));
+            this.simpleButton2.Location = new System.Drawing.Point(153, 4);
+            this.simpleButton2.Name = "simpleButton2";
+            this.simpleButton2.PaintStyle = DevExpress.XtraEditors.Controls.PaintStyles.Light;
+            this.simpleButton2.Size = new System.Drawing.Size(70, 75);
+            this.simpleButton2.TabIndex = 3;
+            this.simpleButton2.Text = "체크인";
             // 
             // Main
             // 
@@ -634,7 +654,7 @@
             this.Controls.Add(this.barDockControlRight);
             this.Controls.Add(this.barDockControlBottom);
             this.Controls.Add(this.barDockControlTop);
-            this.Controls.Add(this.tabFormContentContainer2);
+            this.Controls.Add(this.tabFormContentContainer1);
             this.Controls.Add(this.tabFormControl1);
             this.IconOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("Main.IconOptions.SvgImage")));
             this.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
@@ -667,10 +687,11 @@
             ((System.ComponentModel.ISupportInitialize)(this.tlFolder2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pnlSystemHeader2)).EndInit();
             this.pnlSystemHeader2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.tlData2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.newAddGrid)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pnlTopMenu2)).EndInit();
             this.pnlTopMenu2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.separatorControl1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.behaviorManager1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -713,13 +734,15 @@
         private DevExpress.XtraEditors.PanelControl pnlTopMenu2;
         private DevExpress.XtraEditors.SimpleButton btnRefresh2;
         private DevExpress.XtraEditors.SimpleButton btnConfirm;
-        private DevExpress.XtraTreeList.TreeList tlData2;
-        private DevExpress.XtraTreeList.Columns.TreeListColumn colName2;
-        private DevExpress.XtraTreeList.Columns.TreeListColumn colVersion2;
-        private DevExpress.XtraTreeList.Columns.TreeListColumn colGrade2;
+        private DevExpress.XtraTreeList.TreeList newAddGrid;
+        private DevExpress.XtraTreeList.Columns.TreeListColumn newAddObjNm;
+        private DevExpress.XtraTreeList.Columns.TreeListColumn newAddVersion;
+        private DevExpress.XtraTreeList.Columns.TreeListColumn newAddObjState;
         private DevExpress.XtraTreeList.TreeList tlFolder2;
         private DevExpress.XtraTreeList.Columns.TreeListColumn colFolder2;
         private DevExpress.XtraEditors.SeparatorControl separatorControl1;
         private DevExpress.XtraEditors.SimpleButton simpleButton1;
+        private DevExpress.Utils.Behaviors.BehaviorManager behaviorManager1;
+        private DevExpress.XtraEditors.SimpleButton simpleButton2;
     }
 }

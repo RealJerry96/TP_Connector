@@ -323,10 +323,85 @@ namespace TP_Connector
         #region 두번째 탭 기능 구현
         private void btnConfirm_Click(object sender, EventArgs e)
         {
+            try
+            {
+                // 1. 기본 경로를 바탕화면으로 설정
+                string folderPath = Environment.GetFolderPath(Environment.SpecialFolder.Desktop);
 
+                // 만약 특정 경로(예: C:\Temp)를 열고 싶다면 아래처럼 경로를 직접 지정하면 됩니다.
+                // string folderPath = @"C:\Temp"; 
+
+                // 2. 해당 경로가 실제로 존재하는지 확인
+                if (System.IO.Directory.Exists(folderPath))
+                {
+                    // 3. 윈도우 탐색기로 해당 경로 열기
+                    System.Diagnostics.Process.Start("explorer.exe", folderPath);
+                }
+                else
+                {
+                    XtraMessageBox.Show($"경로를 찾을 수 없습니다.\n{folderPath}", "오류", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
+            catch (Exception ex)
+            {
+                XtraMessageBox.Show($"폴더를 여는 중 오류가 발생했습니다.\n{ex.Message}", "오류", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
 
         }
 
         #endregion
+
+        private void newAddGrid_DragDrop(object sender, DragEventArgs e)
+        {
+            try
+            {
+                // 드롭된 파일들의 경로를 가져옴
+                string[] files = (string[])e.Data.GetData(DataFormats.FileDrop);
+
+                if (files != null && files.Length > 0)
+                {
+                    newAddGrid.BeginUnboundLoad(); // 성능 최적화 (UI 갱신 일시 중지)
+
+                    foreach (string filePath in files)
+                    {
+                        // 파일 정보 가져오기
+                        System.IO.FileInfo fileInfo = new System.IO.FileInfo(filePath);
+
+                        // TreeList에 노드 추가 (컬럼 순서: 자료명, 버전, 등급)
+                        // 만약 컬럼 순서가 다르다면 순서에 맞춰 값을 넣어주세요.
+                        newAddGrid.AppendNode(new object[] {
+                    fileInfo.Name,  // 자료명 (파일명)
+                    "1.0",          // 버전 (기본값)
+                    "New"           // 등급 (기본값)
+                }, null);
+                    }
+
+                    newAddGrid.EndUnboundLoad(); // UI 갱신 재개
+                    newAddGrid.BestFitColumns(); // 컬럼 너비 자동 조정 (선택사항)
+                }
+            }
+            catch (Exception ex)
+            {
+                DevExpress.XtraEditors.XtraMessageBox.Show(this, $"파일 추가 중 오류가 발생했습니다.\n{ex.Message}", "오류", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void newAddGrid_DragEnter(object sender, DragEventArgs e)
+        {
+            // 드래그된 데이터가 '파일' 형식인 경우에만 복사(Copy) 효과 표시
+            if (e.Data.GetDataPresent(DataFormats.FileDrop))
+            {
+                e.Effect = DragDropEffects.Copy;
+            }
+            else
+            {
+                e.Effect = DragDropEffects.None;
+            }
+        }
+
+        private void btnRun_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
