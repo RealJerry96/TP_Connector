@@ -1,10 +1,4 @@
-﻿using DevExpress.XtraEditors.Controls;
-using DevExpress.XtraEditors.Repository;
-// DevExpress
-using DevExpress.XtraGrid;
-using DevExpress.XtraGrid.Columns;
-using DevExpress.XtraGrid.Views.Grid;
-using Microsoft.Win32;
+﻿using Microsoft.Win32;
 using System;
 using System.Collections.Generic;
 using System.Data;
@@ -34,10 +28,11 @@ namespace TP_Connector
         // public static Dictionary<string, DataGridView> dicDocs;
 
         // KEEP: DevExpress GridControl 보관용
-        public static Dictionary<string, GridControl> dicDocsDX;
+        //public static Dictionary<string, GridControl> dicDocsDX;
 
         public static string m_sCompanyUrl = "";
         public static string[] m_DB_OpenStr;
+        public static string[] m_sDivision;
 
         public struct GlobalClientService
         {
@@ -160,6 +155,16 @@ namespace TP_Connector
         {
             GlobalClientService.addInWebService.Dispose();
             GlobalClientService.addInWebService = null;
+        }
+
+        //===========================
+        // 구분자 앞과 뒤로 나눈다
+        //===========================
+        public static void StrDivision(string sStrOri, string sDiv)
+        {
+            m_sDivision = null;
+            string[] sDivv = { sDiv };
+            m_sDivision = sStrOri.Split(sDivv, StringSplitOptions.None);
         }
 
 

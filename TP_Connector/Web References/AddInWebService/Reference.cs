@@ -42,9 +42,9 @@ namespace TP_Connector.AddInWebService {
         
         private System.Threading.SendOrPostCallback getObjectTotalCntOperationCompleted;
         
-        private System.Threading.SendOrPostCallback createFolderOperationCompleted;
-        
         private System.Threading.SendOrPostCallback createObject3DRefOperationCompleted;
+        
+        private System.Threading.SendOrPostCallback createFolderOperationCompleted;
         
         private System.Threading.SendOrPostCallback getObjectVerListOperationCompleted;
         
@@ -53,6 +53,8 @@ namespace TP_Connector.AddInWebService {
         private System.Threading.SendOrPostCallback getCommCodeListOperationCompleted;
         
         private System.Threading.SendOrPostCallback getFolderRootOperationCompleted;
+        
+        private System.Threading.SendOrPostCallback createFolderTpConnectOperationCompleted;
         
         private System.Threading.SendOrPostCallback getClassOperationCompleted;
         
@@ -73,6 +75,10 @@ namespace TP_Connector.AddInWebService {
         private System.Threading.SendOrPostCallback createBomOperationCompleted;
         
         private System.Threading.SendOrPostCallback getFolder3DRootOperationCompleted;
+        
+        private System.Threading.SendOrPostCallback checkObjectTpConnectOperationCompleted;
+        
+        private System.Threading.SendOrPostCallback modifyObjectStateTpConnectOperationCompleted;
         
         private System.Threading.SendOrPostCallback createFile3DInfoOperationCompleted;
         
@@ -102,6 +108,8 @@ namespace TP_Connector.AddInWebService {
         
         private System.Threading.SendOrPostCallback getSearchObjectListSolidWorksOperationCompleted;
         
+        private System.Threading.SendOrPostCallback modifyObjectTpConnectOperationCompleted;
+        
         private System.Threading.SendOrPostCallback getAutonum4InsertOperationCompleted;
         
         private System.Threading.SendOrPostCallback getFolderListSolidworksOperationCompleted;
@@ -125,6 +133,10 @@ namespace TP_Connector.AddInWebService {
         private System.Threading.SendOrPostCallback checkObjectSolidworksOperationCompleted;
         
         private System.Threading.SendOrPostCallback uploadFileProcessCadAddinOperationCompleted;
+        
+        private System.Threading.SendOrPostCallback uploadFileProcessTpConnectOperationCompleted;
+        
+        private System.Threading.SendOrPostCallback createObjectWorkCommTpConnectOperationCompleted;
         
         private System.Threading.SendOrPostCallback getFolder3DListOperationCompleted;
         
@@ -170,6 +182,8 @@ namespace TP_Connector.AddInWebService {
         
         private System.Threading.SendOrPostCallback removeMarkupOperationCompleted;
         
+        private System.Threading.SendOrPostCallback getObjectFileListTpConnectOperationCompleted;
+        
         private System.Threading.SendOrPostCallback getObjectSearchListOperationCompleted;
         
         private System.Threading.SendOrPostCallback uploadFileProcessCatiaOperationCompleted;
@@ -184,6 +198,8 @@ namespace TP_Connector.AddInWebService {
         
         private System.Threading.SendOrPostCallback selectViewerLicInfoOperationCompleted;
         
+        private System.Threading.SendOrPostCallback createObjectVersionTpConnectOperationCompleted;
+        
         private System.Threading.SendOrPostCallback modifyObjectState4FTPOperationCompleted;
         
         private System.Threading.SendOrPostCallback getCurrentFolderOperationCompleted;
@@ -194,11 +210,15 @@ namespace TP_Connector.AddInWebService {
         
         private System.Threading.SendOrPostCallback getCurrentDateOperationCompleted;
         
+        private System.Threading.SendOrPostCallback getSearchObjectListTpConnectOperationCompleted;
+        
         private System.Threading.SendOrPostCallback uploadFileProcess3DOperationCompleted;
         
         private System.Threading.SendOrPostCallback getSearchObjectListCatiaOperationCompleted;
         
         private System.Threading.SendOrPostCallback uploadFileProcessBatchOperationCompleted;
+        
+        private System.Threading.SendOrPostCallback createObject3DRefTpConnectOperationCompleted;
         
         private System.Threading.SendOrPostCallback getTagNoListOperationCompleted;
         
@@ -237,6 +257,8 @@ namespace TP_Connector.AddInWebService {
         private System.Threading.SendOrPostCallback modifyObjectCatiaOperationCompleted;
         
         private System.Threading.SendOrPostCallback converter3DOperationCompleted;
+        
+        private System.Threading.SendOrPostCallback createObjectTpConnectOperationCompleted;
         
         private System.Threading.SendOrPostCallback getPCodeListOperationCompleted;
         
@@ -303,10 +325,10 @@ namespace TP_Connector.AddInWebService {
         public event getObjectTotalCntCompletedEventHandler getObjectTotalCntCompleted;
         
         /// <remarks/>
-        public event createFolderCompletedEventHandler createFolderCompleted;
+        public event createObject3DRefCompletedEventHandler createObject3DRefCompleted;
         
         /// <remarks/>
-        public event createObject3DRefCompletedEventHandler createObject3DRefCompleted;
+        public event createFolderCompletedEventHandler createFolderCompleted;
         
         /// <remarks/>
         public event getObjectVerListCompletedEventHandler getObjectVerListCompleted;
@@ -319,6 +341,9 @@ namespace TP_Connector.AddInWebService {
         
         /// <remarks/>
         public event getFolderRootCompletedEventHandler getFolderRootCompleted;
+        
+        /// <remarks/>
+        public event createFolderTpConnectCompletedEventHandler createFolderTpConnectCompleted;
         
         /// <remarks/>
         public event getClassCompletedEventHandler getClassCompleted;
@@ -349,6 +374,12 @@ namespace TP_Connector.AddInWebService {
         
         /// <remarks/>
         public event getFolder3DRootCompletedEventHandler getFolder3DRootCompleted;
+        
+        /// <remarks/>
+        public event checkObjectTpConnectCompletedEventHandler checkObjectTpConnectCompleted;
+        
+        /// <remarks/>
+        public event modifyObjectStateTpConnectCompletedEventHandler modifyObjectStateTpConnectCompleted;
         
         /// <remarks/>
         public event createFile3DInfoCompletedEventHandler createFile3DInfoCompleted;
@@ -393,6 +424,9 @@ namespace TP_Connector.AddInWebService {
         public event getSearchObjectListSolidWorksCompletedEventHandler getSearchObjectListSolidWorksCompleted;
         
         /// <remarks/>
+        public event modifyObjectTpConnectCompletedEventHandler modifyObjectTpConnectCompleted;
+        
+        /// <remarks/>
         public event getAutonum4InsertCompletedEventHandler getAutonum4InsertCompleted;
         
         /// <remarks/>
@@ -427,6 +461,12 @@ namespace TP_Connector.AddInWebService {
         
         /// <remarks/>
         public event uploadFileProcessCadAddinCompletedEventHandler uploadFileProcessCadAddinCompleted;
+        
+        /// <remarks/>
+        public event uploadFileProcessTpConnectCompletedEventHandler uploadFileProcessTpConnectCompleted;
+        
+        /// <remarks/>
+        public event createObjectWorkCommTpConnectCompletedEventHandler createObjectWorkCommTpConnectCompleted;
         
         /// <remarks/>
         public event getFolder3DListCompletedEventHandler getFolder3DListCompleted;
@@ -495,6 +535,9 @@ namespace TP_Connector.AddInWebService {
         public event removeMarkupCompletedEventHandler removeMarkupCompleted;
         
         /// <remarks/>
+        public event getObjectFileListTpConnectCompletedEventHandler getObjectFileListTpConnectCompleted;
+        
+        /// <remarks/>
         public event getObjectSearchListCompletedEventHandler getObjectSearchListCompleted;
         
         /// <remarks/>
@@ -516,6 +559,9 @@ namespace TP_Connector.AddInWebService {
         public event selectViewerLicInfoCompletedEventHandler selectViewerLicInfoCompleted;
         
         /// <remarks/>
+        public event createObjectVersionTpConnectCompletedEventHandler createObjectVersionTpConnectCompleted;
+        
+        /// <remarks/>
         public event modifyObjectState4FTPCompletedEventHandler modifyObjectState4FTPCompleted;
         
         /// <remarks/>
@@ -531,6 +577,9 @@ namespace TP_Connector.AddInWebService {
         public event getCurrentDateCompletedEventHandler getCurrentDateCompleted;
         
         /// <remarks/>
+        public event getSearchObjectListTpConnectCompletedEventHandler getSearchObjectListTpConnectCompleted;
+        
+        /// <remarks/>
         public event uploadFileProcess3DCompletedEventHandler uploadFileProcess3DCompleted;
         
         /// <remarks/>
@@ -538,6 +587,9 @@ namespace TP_Connector.AddInWebService {
         
         /// <remarks/>
         public event uploadFileProcessBatchCompletedEventHandler uploadFileProcessBatchCompleted;
+        
+        /// <remarks/>
+        public event createObject3DRefTpConnectCompletedEventHandler createObject3DRefTpConnectCompleted;
         
         /// <remarks/>
         public event getTagNoListCompletedEventHandler getTagNoListCompleted;
@@ -595,6 +647,9 @@ namespace TP_Connector.AddInWebService {
         
         /// <remarks/>
         public event converter3DCompletedEventHandler converter3DCompleted;
+        
+        /// <remarks/>
+        public event createObjectTpConnectCompletedEventHandler createObjectTpConnectCompleted;
         
         /// <remarks/>
         public event getPCodeListCompletedEventHandler getPCodeListCompleted;
@@ -790,36 +845,6 @@ namespace TP_Connector.AddInWebService {
         
         /// <remarks/>
         [System.Web.Services.Protocols.SoapDocumentMethodAttribute("", RequestNamespace="http://service.addin.teamplus9.com/", ResponseNamespace="http://service.addin.teamplus9.com/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
-        public void createFolder([System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)] folderVO4Addin arg0, [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)] out int @return, [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)] [System.Xml.Serialization.XmlIgnoreAttribute()] out bool returnSpecified) {
-            object[] results = this.Invoke("createFolder", new object[] {
-                        arg0});
-            @return = ((int)(results[0]));
-            returnSpecified = ((bool)(results[1]));
-        }
-        
-        /// <remarks/>
-        public void createFolderAsync(folderVO4Addin arg0) {
-            this.createFolderAsync(arg0, null);
-        }
-        
-        /// <remarks/>
-        public void createFolderAsync(folderVO4Addin arg0, object userState) {
-            if ((this.createFolderOperationCompleted == null)) {
-                this.createFolderOperationCompleted = new System.Threading.SendOrPostCallback(this.OncreateFolderOperationCompleted);
-            }
-            this.InvokeAsync("createFolder", new object[] {
-                        arg0}, this.createFolderOperationCompleted, userState);
-        }
-        
-        private void OncreateFolderOperationCompleted(object arg) {
-            if ((this.createFolderCompleted != null)) {
-                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
-                this.createFolderCompleted(this, new createFolderCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
-            }
-        }
-        
-        /// <remarks/>
-        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("", RequestNamespace="http://service.addin.teamplus9.com/", ResponseNamespace="http://service.addin.teamplus9.com/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
         [return: System.Xml.Serialization.XmlElementAttribute("return", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
         public int createObject3DRef([System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)] object3DRefVO arg0) {
             object[] results = this.Invoke("createObject3DRef", new object[] {
@@ -845,6 +870,36 @@ namespace TP_Connector.AddInWebService {
             if ((this.createObject3DRefCompleted != null)) {
                 System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
                 this.createObject3DRefCompleted(this, new createObject3DRefCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
+            }
+        }
+        
+        /// <remarks/>
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("", RequestNamespace="http://service.addin.teamplus9.com/", ResponseNamespace="http://service.addin.teamplus9.com/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        public void createFolder([System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)] folderVO4Addin arg0, [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)] out int @return, [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)] [System.Xml.Serialization.XmlIgnoreAttribute()] out bool returnSpecified) {
+            object[] results = this.Invoke("createFolder", new object[] {
+                        arg0});
+            @return = ((int)(results[0]));
+            returnSpecified = ((bool)(results[1]));
+        }
+        
+        /// <remarks/>
+        public void createFolderAsync(folderVO4Addin arg0) {
+            this.createFolderAsync(arg0, null);
+        }
+        
+        /// <remarks/>
+        public void createFolderAsync(folderVO4Addin arg0, object userState) {
+            if ((this.createFolderOperationCompleted == null)) {
+                this.createFolderOperationCompleted = new System.Threading.SendOrPostCallback(this.OncreateFolderOperationCompleted);
+            }
+            this.InvokeAsync("createFolder", new object[] {
+                        arg0}, this.createFolderOperationCompleted, userState);
+        }
+        
+        private void OncreateFolderOperationCompleted(object arg) {
+            if ((this.createFolderCompleted != null)) {
+                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
+                this.createFolderCompleted(this, new createFolderCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
             }
         }
         
@@ -971,6 +1026,36 @@ namespace TP_Connector.AddInWebService {
             if ((this.getFolderRootCompleted != null)) {
                 System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
                 this.getFolderRootCompleted(this, new getFolderRootCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
+            }
+        }
+        
+        /// <remarks/>
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("", RequestNamespace="http://service.addin.teamplus9.com/", ResponseNamespace="http://service.addin.teamplus9.com/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        public void createFolderTpConnect([System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)] folderVO4Addin arg0, [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)] out int @return, [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)] [System.Xml.Serialization.XmlIgnoreAttribute()] out bool returnSpecified) {
+            object[] results = this.Invoke("createFolderTpConnect", new object[] {
+                        arg0});
+            @return = ((int)(results[0]));
+            returnSpecified = ((bool)(results[1]));
+        }
+        
+        /// <remarks/>
+        public void createFolderTpConnectAsync(folderVO4Addin arg0) {
+            this.createFolderTpConnectAsync(arg0, null);
+        }
+        
+        /// <remarks/>
+        public void createFolderTpConnectAsync(folderVO4Addin arg0, object userState) {
+            if ((this.createFolderTpConnectOperationCompleted == null)) {
+                this.createFolderTpConnectOperationCompleted = new System.Threading.SendOrPostCallback(this.OncreateFolderTpConnectOperationCompleted);
+            }
+            this.InvokeAsync("createFolderTpConnect", new object[] {
+                        arg0}, this.createFolderTpConnectOperationCompleted, userState);
+        }
+        
+        private void OncreateFolderTpConnectOperationCompleted(object arg) {
+            if ((this.createFolderTpConnectCompleted != null)) {
+                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
+                this.createFolderTpConnectCompleted(this, new createFolderTpConnectCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
             }
         }
         
@@ -1275,6 +1360,76 @@ namespace TP_Connector.AddInWebService {
             if ((this.getFolder3DRootCompleted != null)) {
                 System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
                 this.getFolder3DRootCompleted(this, new getFolder3DRootCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
+            }
+        }
+        
+        /// <remarks/>
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("", RequestNamespace="http://service.addin.teamplus9.com/", ResponseNamespace="http://service.addin.teamplus9.com/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        [return: System.Xml.Serialization.XmlElementAttribute("return", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public string checkObjectTpConnect([System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)] int arg0, [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)] [System.Xml.Serialization.XmlIgnoreAttribute()] bool arg0Specified, [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)] string arg1, [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)] string arg2, [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)] string arg3) {
+            object[] results = this.Invoke("checkObjectTpConnect", new object[] {
+                        arg0,
+                        arg0Specified,
+                        arg1,
+                        arg2,
+                        arg3});
+            return ((string)(results[0]));
+        }
+        
+        /// <remarks/>
+        public void checkObjectTpConnectAsync(int arg0, bool arg0Specified, string arg1, string arg2, string arg3) {
+            this.checkObjectTpConnectAsync(arg0, arg0Specified, arg1, arg2, arg3, null);
+        }
+        
+        /// <remarks/>
+        public void checkObjectTpConnectAsync(int arg0, bool arg0Specified, string arg1, string arg2, string arg3, object userState) {
+            if ((this.checkObjectTpConnectOperationCompleted == null)) {
+                this.checkObjectTpConnectOperationCompleted = new System.Threading.SendOrPostCallback(this.OncheckObjectTpConnectOperationCompleted);
+            }
+            this.InvokeAsync("checkObjectTpConnect", new object[] {
+                        arg0,
+                        arg0Specified,
+                        arg1,
+                        arg2,
+                        arg3}, this.checkObjectTpConnectOperationCompleted, userState);
+        }
+        
+        private void OncheckObjectTpConnectOperationCompleted(object arg) {
+            if ((this.checkObjectTpConnectCompleted != null)) {
+                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
+                this.checkObjectTpConnectCompleted(this, new checkObjectTpConnectCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
+            }
+        }
+        
+        /// <remarks/>
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("", RequestNamespace="http://service.addin.teamplus9.com/", ResponseNamespace="http://service.addin.teamplus9.com/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        [return: System.Xml.Serialization.XmlElementAttribute("return", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public int modifyObjectStateTpConnect([System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)] objectVO arg0, [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)] objectFileVO arg1) {
+            object[] results = this.Invoke("modifyObjectStateTpConnect", new object[] {
+                        arg0,
+                        arg1});
+            return ((int)(results[0]));
+        }
+        
+        /// <remarks/>
+        public void modifyObjectStateTpConnectAsync(objectVO arg0, objectFileVO arg1) {
+            this.modifyObjectStateTpConnectAsync(arg0, arg1, null);
+        }
+        
+        /// <remarks/>
+        public void modifyObjectStateTpConnectAsync(objectVO arg0, objectFileVO arg1, object userState) {
+            if ((this.modifyObjectStateTpConnectOperationCompleted == null)) {
+                this.modifyObjectStateTpConnectOperationCompleted = new System.Threading.SendOrPostCallback(this.OnmodifyObjectStateTpConnectOperationCompleted);
+            }
+            this.InvokeAsync("modifyObjectStateTpConnect", new object[] {
+                        arg0,
+                        arg1}, this.modifyObjectStateTpConnectOperationCompleted, userState);
+        }
+        
+        private void OnmodifyObjectStateTpConnectOperationCompleted(object arg) {
+            if ((this.modifyObjectStateTpConnectCompleted != null)) {
+                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
+                this.modifyObjectStateTpConnectCompleted(this, new modifyObjectStateTpConnectCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
             }
         }
         
@@ -1715,6 +1870,36 @@ namespace TP_Connector.AddInWebService {
         /// <remarks/>
         [System.Web.Services.Protocols.SoapDocumentMethodAttribute("", RequestNamespace="http://service.addin.teamplus9.com/", ResponseNamespace="http://service.addin.teamplus9.com/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
         [return: System.Xml.Serialization.XmlElementAttribute("return", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public int modifyObjectTpConnect([System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)] objectVO arg0) {
+            object[] results = this.Invoke("modifyObjectTpConnect", new object[] {
+                        arg0});
+            return ((int)(results[0]));
+        }
+        
+        /// <remarks/>
+        public void modifyObjectTpConnectAsync(objectVO arg0) {
+            this.modifyObjectTpConnectAsync(arg0, null);
+        }
+        
+        /// <remarks/>
+        public void modifyObjectTpConnectAsync(objectVO arg0, object userState) {
+            if ((this.modifyObjectTpConnectOperationCompleted == null)) {
+                this.modifyObjectTpConnectOperationCompleted = new System.Threading.SendOrPostCallback(this.OnmodifyObjectTpConnectOperationCompleted);
+            }
+            this.InvokeAsync("modifyObjectTpConnect", new object[] {
+                        arg0}, this.modifyObjectTpConnectOperationCompleted, userState);
+        }
+        
+        private void OnmodifyObjectTpConnectOperationCompleted(object arg) {
+            if ((this.modifyObjectTpConnectCompleted != null)) {
+                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
+                this.modifyObjectTpConnectCompleted(this, new modifyObjectTpConnectCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
+            }
+        }
+        
+        /// <remarks/>
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("", RequestNamespace="http://service.addin.teamplus9.com/", ResponseNamespace="http://service.addin.teamplus9.com/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        [return: System.Xml.Serialization.XmlElementAttribute("return", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
         public string getAutonum4Insert([System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)] autonumSearchTO arg0) {
             object[] results = this.Invoke("getAutonum4Insert", new object[] {
                         arg0});
@@ -2089,6 +2274,64 @@ namespace TP_Connector.AddInWebService {
             if ((this.uploadFileProcessCadAddinCompleted != null)) {
                 System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
                 this.uploadFileProcessCadAddinCompleted(this, new uploadFileProcessCadAddinCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
+            }
+        }
+        
+        /// <remarks/>
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("", RequestNamespace="http://service.addin.teamplus9.com/", ResponseNamespace="http://service.addin.teamplus9.com/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        [return: System.Xml.Serialization.XmlElementAttribute("return", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public int uploadFileProcessTpConnect([System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)] objectFileVO arg0) {
+            object[] results = this.Invoke("uploadFileProcessTpConnect", new object[] {
+                        arg0});
+            return ((int)(results[0]));
+        }
+        
+        /// <remarks/>
+        public void uploadFileProcessTpConnectAsync(objectFileVO arg0) {
+            this.uploadFileProcessTpConnectAsync(arg0, null);
+        }
+        
+        /// <remarks/>
+        public void uploadFileProcessTpConnectAsync(objectFileVO arg0, object userState) {
+            if ((this.uploadFileProcessTpConnectOperationCompleted == null)) {
+                this.uploadFileProcessTpConnectOperationCompleted = new System.Threading.SendOrPostCallback(this.OnuploadFileProcessTpConnectOperationCompleted);
+            }
+            this.InvokeAsync("uploadFileProcessTpConnect", new object[] {
+                        arg0}, this.uploadFileProcessTpConnectOperationCompleted, userState);
+        }
+        
+        private void OnuploadFileProcessTpConnectOperationCompleted(object arg) {
+            if ((this.uploadFileProcessTpConnectCompleted != null)) {
+                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
+                this.uploadFileProcessTpConnectCompleted(this, new uploadFileProcessTpConnectCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
+            }
+        }
+        
+        /// <remarks/>
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("", RequestNamespace="http://service.addin.teamplus9.com/", ResponseNamespace="http://service.addin.teamplus9.com/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        public void createObjectWorkCommTpConnect([System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)] objectVO arg0) {
+            this.Invoke("createObjectWorkCommTpConnect", new object[] {
+                        arg0});
+        }
+        
+        /// <remarks/>
+        public void createObjectWorkCommTpConnectAsync(objectVO arg0) {
+            this.createObjectWorkCommTpConnectAsync(arg0, null);
+        }
+        
+        /// <remarks/>
+        public void createObjectWorkCommTpConnectAsync(objectVO arg0, object userState) {
+            if ((this.createObjectWorkCommTpConnectOperationCompleted == null)) {
+                this.createObjectWorkCommTpConnectOperationCompleted = new System.Threading.SendOrPostCallback(this.OncreateObjectWorkCommTpConnectOperationCompleted);
+            }
+            this.InvokeAsync("createObjectWorkCommTpConnect", new object[] {
+                        arg0}, this.createObjectWorkCommTpConnectOperationCompleted, userState);
+        }
+        
+        private void OncreateObjectWorkCommTpConnectOperationCompleted(object arg) {
+            if ((this.createObjectWorkCommTpConnectCompleted != null)) {
+                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
+                this.createObjectWorkCommTpConnectCompleted(this, new System.ComponentModel.AsyncCompletedEventArgs(invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
             }
         }
         
@@ -2811,6 +3054,36 @@ namespace TP_Connector.AddInWebService {
         /// <remarks/>
         [System.Web.Services.Protocols.SoapDocumentMethodAttribute("", RequestNamespace="http://service.addin.teamplus9.com/", ResponseNamespace="http://service.addin.teamplus9.com/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
         [return: System.Xml.Serialization.XmlElementAttribute("return", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public objectFileVO[] getObjectFileListTpConnect([System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)] objectSearchTO arg0) {
+            object[] results = this.Invoke("getObjectFileListTpConnect", new object[] {
+                        arg0});
+            return ((objectFileVO[])(results[0]));
+        }
+        
+        /// <remarks/>
+        public void getObjectFileListTpConnectAsync(objectSearchTO arg0) {
+            this.getObjectFileListTpConnectAsync(arg0, null);
+        }
+        
+        /// <remarks/>
+        public void getObjectFileListTpConnectAsync(objectSearchTO arg0, object userState) {
+            if ((this.getObjectFileListTpConnectOperationCompleted == null)) {
+                this.getObjectFileListTpConnectOperationCompleted = new System.Threading.SendOrPostCallback(this.OngetObjectFileListTpConnectOperationCompleted);
+            }
+            this.InvokeAsync("getObjectFileListTpConnect", new object[] {
+                        arg0}, this.getObjectFileListTpConnectOperationCompleted, userState);
+        }
+        
+        private void OngetObjectFileListTpConnectOperationCompleted(object arg) {
+            if ((this.getObjectFileListTpConnectCompleted != null)) {
+                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
+                this.getObjectFileListTpConnectCompleted(this, new getObjectFileListTpConnectCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
+            }
+        }
+        
+        /// <remarks/>
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("", RequestNamespace="http://service.addin.teamplus9.com/", ResponseNamespace="http://service.addin.teamplus9.com/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        [return: System.Xml.Serialization.XmlElementAttribute("return", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
         public searchVO[] getObjectSearchList([System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)] searchTO arg0) {
             object[] results = this.Invoke("getObjectSearchList", new object[] {
                         arg0});
@@ -3025,6 +3298,40 @@ namespace TP_Connector.AddInWebService {
         /// <remarks/>
         [System.Web.Services.Protocols.SoapDocumentMethodAttribute("", RequestNamespace="http://service.addin.teamplus9.com/", ResponseNamespace="http://service.addin.teamplus9.com/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
         [return: System.Xml.Serialization.XmlElementAttribute("return", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public int createObjectVersionTpConnect([System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)] int arg0, [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)] [System.Xml.Serialization.XmlIgnoreAttribute()] bool arg0Specified, [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)] string arg1) {
+            object[] results = this.Invoke("createObjectVersionTpConnect", new object[] {
+                        arg0,
+                        arg0Specified,
+                        arg1});
+            return ((int)(results[0]));
+        }
+        
+        /// <remarks/>
+        public void createObjectVersionTpConnectAsync(int arg0, bool arg0Specified, string arg1) {
+            this.createObjectVersionTpConnectAsync(arg0, arg0Specified, arg1, null);
+        }
+        
+        /// <remarks/>
+        public void createObjectVersionTpConnectAsync(int arg0, bool arg0Specified, string arg1, object userState) {
+            if ((this.createObjectVersionTpConnectOperationCompleted == null)) {
+                this.createObjectVersionTpConnectOperationCompleted = new System.Threading.SendOrPostCallback(this.OncreateObjectVersionTpConnectOperationCompleted);
+            }
+            this.InvokeAsync("createObjectVersionTpConnect", new object[] {
+                        arg0,
+                        arg0Specified,
+                        arg1}, this.createObjectVersionTpConnectOperationCompleted, userState);
+        }
+        
+        private void OncreateObjectVersionTpConnectOperationCompleted(object arg) {
+            if ((this.createObjectVersionTpConnectCompleted != null)) {
+                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
+                this.createObjectVersionTpConnectCompleted(this, new createObjectVersionTpConnectCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
+            }
+        }
+        
+        /// <remarks/>
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("", RequestNamespace="http://service.addin.teamplus9.com/", ResponseNamespace="http://service.addin.teamplus9.com/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        [return: System.Xml.Serialization.XmlElementAttribute("return", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
         public string modifyObjectState4FTP([System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)] objectVO arg0, [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)] objectFileVO arg1) {
             object[] results = this.Invoke("modifyObjectState4FTP", new object[] {
                         arg0,
@@ -3171,6 +3478,38 @@ namespace TP_Connector.AddInWebService {
         /// <remarks/>
         [System.Web.Services.Protocols.SoapDocumentMethodAttribute("", RequestNamespace="http://service.addin.teamplus9.com/", ResponseNamespace="http://service.addin.teamplus9.com/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
         [return: System.Xml.Serialization.XmlElementAttribute("return", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public objectVO[] getSearchObjectListTpConnect([System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)] objectSearchTO arg0, [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)] pagingSearchTO arg1) {
+            object[] results = this.Invoke("getSearchObjectListTpConnect", new object[] {
+                        arg0,
+                        arg1});
+            return ((objectVO[])(results[0]));
+        }
+        
+        /// <remarks/>
+        public void getSearchObjectListTpConnectAsync(objectSearchTO arg0, pagingSearchTO arg1) {
+            this.getSearchObjectListTpConnectAsync(arg0, arg1, null);
+        }
+        
+        /// <remarks/>
+        public void getSearchObjectListTpConnectAsync(objectSearchTO arg0, pagingSearchTO arg1, object userState) {
+            if ((this.getSearchObjectListTpConnectOperationCompleted == null)) {
+                this.getSearchObjectListTpConnectOperationCompleted = new System.Threading.SendOrPostCallback(this.OngetSearchObjectListTpConnectOperationCompleted);
+            }
+            this.InvokeAsync("getSearchObjectListTpConnect", new object[] {
+                        arg0,
+                        arg1}, this.getSearchObjectListTpConnectOperationCompleted, userState);
+        }
+        
+        private void OngetSearchObjectListTpConnectOperationCompleted(object arg) {
+            if ((this.getSearchObjectListTpConnectCompleted != null)) {
+                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
+                this.getSearchObjectListTpConnectCompleted(this, new getSearchObjectListTpConnectCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
+            }
+        }
+        
+        /// <remarks/>
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("", RequestNamespace="http://service.addin.teamplus9.com/", ResponseNamespace="http://service.addin.teamplus9.com/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        [return: System.Xml.Serialization.XmlElementAttribute("return", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
         public int uploadFileProcess3D([System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)] object3DFileVO arg0) {
             object[] results = this.Invoke("uploadFileProcess3D", new object[] {
                         arg0});
@@ -3259,6 +3598,36 @@ namespace TP_Connector.AddInWebService {
             if ((this.uploadFileProcessBatchCompleted != null)) {
                 System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
                 this.uploadFileProcessBatchCompleted(this, new uploadFileProcessBatchCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
+            }
+        }
+        
+        /// <remarks/>
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("", RequestNamespace="http://service.addin.teamplus9.com/", ResponseNamespace="http://service.addin.teamplus9.com/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        [return: System.Xml.Serialization.XmlElementAttribute("return", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public int createObject3DRefTpConnect([System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)] object3DRefVO arg0) {
+            object[] results = this.Invoke("createObject3DRefTpConnect", new object[] {
+                        arg0});
+            return ((int)(results[0]));
+        }
+        
+        /// <remarks/>
+        public void createObject3DRefTpConnectAsync(object3DRefVO arg0) {
+            this.createObject3DRefTpConnectAsync(arg0, null);
+        }
+        
+        /// <remarks/>
+        public void createObject3DRefTpConnectAsync(object3DRefVO arg0, object userState) {
+            if ((this.createObject3DRefTpConnectOperationCompleted == null)) {
+                this.createObject3DRefTpConnectOperationCompleted = new System.Threading.SendOrPostCallback(this.OncreateObject3DRefTpConnectOperationCompleted);
+            }
+            this.InvokeAsync("createObject3DRefTpConnect", new object[] {
+                        arg0}, this.createObject3DRefTpConnectOperationCompleted, userState);
+        }
+        
+        private void OncreateObject3DRefTpConnectOperationCompleted(object arg) {
+            if ((this.createObject3DRefTpConnectCompleted != null)) {
+                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
+                this.createObject3DRefTpConnectCompleted(this, new createObject3DRefTpConnectCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
             }
         }
         
@@ -3879,6 +4248,36 @@ namespace TP_Connector.AddInWebService {
             if ((this.converter3DCompleted != null)) {
                 System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
                 this.converter3DCompleted(this, new converter3DCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
+            }
+        }
+        
+        /// <remarks/>
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("", RequestNamespace="http://service.addin.teamplus9.com/", ResponseNamespace="http://service.addin.teamplus9.com/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        [return: System.Xml.Serialization.XmlElementAttribute("return", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public string createObjectTpConnect([System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)] objectVO arg0) {
+            object[] results = this.Invoke("createObjectTpConnect", new object[] {
+                        arg0});
+            return ((string)(results[0]));
+        }
+        
+        /// <remarks/>
+        public void createObjectTpConnectAsync(objectVO arg0) {
+            this.createObjectTpConnectAsync(arg0, null);
+        }
+        
+        /// <remarks/>
+        public void createObjectTpConnectAsync(objectVO arg0, object userState) {
+            if ((this.createObjectTpConnectOperationCompleted == null)) {
+                this.createObjectTpConnectOperationCompleted = new System.Threading.SendOrPostCallback(this.OncreateObjectTpConnectOperationCompleted);
+            }
+            this.InvokeAsync("createObjectTpConnect", new object[] {
+                        arg0}, this.createObjectTpConnectOperationCompleted, userState);
+        }
+        
+        private void OncreateObjectTpConnectOperationCompleted(object arg) {
+            if ((this.createObjectTpConnectCompleted != null)) {
+                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
+                this.createObjectTpConnectCompleted(this, new createObjectTpConnectCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
             }
         }
         
@@ -6898,6 +7297,18 @@ namespace TP_Connector.AddInWebService {
         
         private int versionField;
         
+        private string cDrawerField;
+        
+        private string cDwgCntField;
+        
+        private string cDwgDateField;
+        
+        private string cDwgNo2Field;
+        
+        private string cDwgSizeField;
+        
+        private string cStockNoField;
+        
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
         public string fileNm {
@@ -7181,6 +7592,72 @@ namespace TP_Connector.AddInWebService {
             }
             set {
                 this.versionField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public string cDrawer {
+            get {
+                return this.cDrawerField;
+            }
+            set {
+                this.cDrawerField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public string cDwgCnt {
+            get {
+                return this.cDwgCntField;
+            }
+            set {
+                this.cDwgCntField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public string cDwgDate {
+            get {
+                return this.cDwgDateField;
+            }
+            set {
+                this.cDwgDateField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public string cDwgNo2 {
+            get {
+                return this.cDwgNo2Field;
+            }
+            set {
+                this.cDwgNo2Field = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public string cDwgSize {
+            get {
+                return this.cDwgSizeField;
+            }
+            set {
+                this.cDwgSizeField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public string cStockNo {
+            get {
+                return this.cStockNoField;
+            }
+            set {
+                this.cStockNoField = value;
             }
         }
     }
@@ -7627,6 +8104,8 @@ namespace TP_Connector.AddInWebService {
         
         private string userIdField;
         
+        private string[] cStockNoListField;
+        
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
         public string all {
@@ -7888,6 +8367,17 @@ namespace TP_Connector.AddInWebService {
             }
             set {
                 this.userIdField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute("cStockNoList", Form=System.Xml.Schema.XmlSchemaForm.Unqualified, IsNullable=true)]
+        public string[] cStockNoList {
+            get {
+                return this.cStockNoListField;
+            }
+            set {
+                this.cStockNoListField = value;
             }
         }
     }
@@ -11162,132 +11652,6 @@ namespace TP_Connector.AddInWebService {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.addin.teamplus9.com/")]
-    public partial class object3DRefVO {
-        
-        private int childVerSeqField;
-        
-        private bool childVerSeqFieldSpecified;
-        
-        private int parentVerSeqField;
-        
-        private bool parentVerSeqFieldSpecified;
-        
-        private int refSeqField;
-        
-        private bool refSeqFieldSpecified;
-        
-        private System.DateTime regDtField;
-        
-        private bool regDtFieldSpecified;
-        
-        private string regIdField;
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public int childVerSeq {
-            get {
-                return this.childVerSeqField;
-            }
-            set {
-                this.childVerSeqField = value;
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlIgnoreAttribute()]
-        public bool childVerSeqSpecified {
-            get {
-                return this.childVerSeqFieldSpecified;
-            }
-            set {
-                this.childVerSeqFieldSpecified = value;
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public int parentVerSeq {
-            get {
-                return this.parentVerSeqField;
-            }
-            set {
-                this.parentVerSeqField = value;
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlIgnoreAttribute()]
-        public bool parentVerSeqSpecified {
-            get {
-                return this.parentVerSeqFieldSpecified;
-            }
-            set {
-                this.parentVerSeqFieldSpecified = value;
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public int refSeq {
-            get {
-                return this.refSeqField;
-            }
-            set {
-                this.refSeqField = value;
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlIgnoreAttribute()]
-        public bool refSeqSpecified {
-            get {
-                return this.refSeqFieldSpecified;
-            }
-            set {
-                this.refSeqFieldSpecified = value;
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public System.DateTime regDt {
-            get {
-                return this.regDtField;
-            }
-            set {
-                this.regDtField = value;
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlIgnoreAttribute()]
-        public bool regDtSpecified {
-            get {
-                return this.regDtFieldSpecified;
-            }
-            set {
-                this.regDtFieldSpecified = value;
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public string regId {
-            get {
-                return this.regIdField;
-            }
-            set {
-                this.regIdField = value;
-            }
-        }
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.9221.0")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.addin.teamplus9.com/")]
     public partial class folderVO4Addin {
         
         private string adminIdField;
@@ -11547,6 +11911,132 @@ namespace TP_Connector.AddInWebService {
             }
             set {
                 this.updIdField = value;
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.8.9221.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://service.addin.teamplus9.com/")]
+    public partial class object3DRefVO {
+        
+        private int childVerSeqField;
+        
+        private bool childVerSeqFieldSpecified;
+        
+        private int parentVerSeqField;
+        
+        private bool parentVerSeqFieldSpecified;
+        
+        private int refSeqField;
+        
+        private bool refSeqFieldSpecified;
+        
+        private System.DateTime regDtField;
+        
+        private bool regDtFieldSpecified;
+        
+        private string regIdField;
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public int childVerSeq {
+            get {
+                return this.childVerSeqField;
+            }
+            set {
+                this.childVerSeqField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlIgnoreAttribute()]
+        public bool childVerSeqSpecified {
+            get {
+                return this.childVerSeqFieldSpecified;
+            }
+            set {
+                this.childVerSeqFieldSpecified = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public int parentVerSeq {
+            get {
+                return this.parentVerSeqField;
+            }
+            set {
+                this.parentVerSeqField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlIgnoreAttribute()]
+        public bool parentVerSeqSpecified {
+            get {
+                return this.parentVerSeqFieldSpecified;
+            }
+            set {
+                this.parentVerSeqFieldSpecified = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public int refSeq {
+            get {
+                return this.refSeqField;
+            }
+            set {
+                this.refSeqField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlIgnoreAttribute()]
+        public bool refSeqSpecified {
+            get {
+                return this.refSeqFieldSpecified;
+            }
+            set {
+                this.refSeqFieldSpecified = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public System.DateTime regDt {
+            get {
+                return this.regDtField;
+            }
+            set {
+                this.regDtField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlIgnoreAttribute()]
+        public bool regDtSpecified {
+            get {
+                return this.regDtFieldSpecified;
+            }
+            set {
+                this.regDtFieldSpecified = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public string regId {
+            get {
+                return this.regIdField;
+            }
+            set {
+                this.regIdField = value;
             }
         }
     }
@@ -12432,6 +12922,18 @@ namespace TP_Connector.AddInWebService {
         private int workspaceSeqField;
         
         private bool workspaceSeqFieldSpecified;
+        
+        private string cDrawerField;
+        
+        private string cDwgCntField;
+        
+        private string cDwgDateField;
+        
+        private string cDwgNo2Field;
+        
+        private string cDwgSizeField;
+        
+        private string cStockNoField;
         
         private string pCodeField;
         
@@ -14285,6 +14787,72 @@ namespace TP_Connector.AddInWebService {
         
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public string cDrawer {
+            get {
+                return this.cDrawerField;
+            }
+            set {
+                this.cDrawerField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public string cDwgCnt {
+            get {
+                return this.cDwgCntField;
+            }
+            set {
+                this.cDwgCntField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public string cDwgDate {
+            get {
+                return this.cDwgDateField;
+            }
+            set {
+                this.cDwgDateField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public string cDwgNo2 {
+            get {
+                return this.cDwgNo2Field;
+            }
+            set {
+                this.cDwgNo2Field = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public string cDwgSize {
+            get {
+                return this.cDwgSizeField;
+            }
+            set {
+                this.cDwgSizeField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public string cStockNo {
+            get {
+                return this.cStockNoField;
+            }
+            set {
+                this.cStockNoField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
         public string pCode {
             get {
                 return this.pCodeField;
@@ -14891,6 +15459,32 @@ namespace TP_Connector.AddInWebService {
     
     /// <remarks/>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.9221.0")]
+    public delegate void createObject3DRefCompletedEventHandler(object sender, createObject3DRefCompletedEventArgs e);
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.9221.0")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    public partial class createObject3DRefCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+        
+        private object[] results;
+        
+        internal createObject3DRefCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+                base(exception, cancelled, userState) {
+            this.results = results;
+        }
+        
+        /// <remarks/>
+        public int Result {
+            get {
+                this.RaiseExceptionIfNecessary();
+                return ((int)(this.results[0]));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.9221.0")]
     public delegate void createFolderCompletedEventHandler(object sender, createFolderCompletedEventArgs e);
     
     /// <remarks/>
@@ -14919,32 +15513,6 @@ namespace TP_Connector.AddInWebService {
             get {
                 this.RaiseExceptionIfNecessary();
                 return ((bool)(this.results[1]));
-            }
-        }
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.9221.0")]
-    public delegate void createObject3DRefCompletedEventHandler(object sender, createObject3DRefCompletedEventArgs e);
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.9221.0")]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    public partial class createObject3DRefCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
-        
-        private object[] results;
-        
-        internal createObject3DRefCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
-                base(exception, cancelled, userState) {
-            this.results = results;
-        }
-        
-        /// <remarks/>
-        public int Result {
-            get {
-                this.RaiseExceptionIfNecessary();
-                return ((int)(this.results[0]));
             }
         }
     }
@@ -15049,6 +15617,40 @@ namespace TP_Connector.AddInWebService {
             get {
                 this.RaiseExceptionIfNecessary();
                 return ((folderVO4Addin)(this.results[0]));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.9221.0")]
+    public delegate void createFolderTpConnectCompletedEventHandler(object sender, createFolderTpConnectCompletedEventArgs e);
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.9221.0")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    public partial class createFolderTpConnectCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+        
+        private object[] results;
+        
+        internal createFolderTpConnectCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+                base(exception, cancelled, userState) {
+            this.results = results;
+        }
+        
+        /// <remarks/>
+        public int @return {
+            get {
+                this.RaiseExceptionIfNecessary();
+                return ((int)(this.results[0]));
+            }
+        }
+        
+        /// <remarks/>
+        public bool returnSpecified {
+            get {
+                this.RaiseExceptionIfNecessary();
+                return ((bool)(this.results[1]));
             }
         }
     }
@@ -15309,6 +15911,58 @@ namespace TP_Connector.AddInWebService {
             get {
                 this.RaiseExceptionIfNecessary();
                 return ((folderVO4Addin)(this.results[0]));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.9221.0")]
+    public delegate void checkObjectTpConnectCompletedEventHandler(object sender, checkObjectTpConnectCompletedEventArgs e);
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.9221.0")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    public partial class checkObjectTpConnectCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+        
+        private object[] results;
+        
+        internal checkObjectTpConnectCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+                base(exception, cancelled, userState) {
+            this.results = results;
+        }
+        
+        /// <remarks/>
+        public string Result {
+            get {
+                this.RaiseExceptionIfNecessary();
+                return ((string)(this.results[0]));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.9221.0")]
+    public delegate void modifyObjectStateTpConnectCompletedEventHandler(object sender, modifyObjectStateTpConnectCompletedEventArgs e);
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.9221.0")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    public partial class modifyObjectStateTpConnectCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+        
+        private object[] results;
+        
+        internal modifyObjectStateTpConnectCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+                base(exception, cancelled, userState) {
+            this.results = results;
+        }
+        
+        /// <remarks/>
+        public int Result {
+            get {
+                this.RaiseExceptionIfNecessary();
+                return ((int)(this.results[0]));
             }
         }
     }
@@ -15687,6 +16341,32 @@ namespace TP_Connector.AddInWebService {
     
     /// <remarks/>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.9221.0")]
+    public delegate void modifyObjectTpConnectCompletedEventHandler(object sender, modifyObjectTpConnectCompletedEventArgs e);
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.9221.0")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    public partial class modifyObjectTpConnectCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+        
+        private object[] results;
+        
+        internal modifyObjectTpConnectCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+                base(exception, cancelled, userState) {
+            this.results = results;
+        }
+        
+        /// <remarks/>
+        public int Result {
+            get {
+                this.RaiseExceptionIfNecessary();
+                return ((int)(this.results[0]));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.9221.0")]
     public delegate void getAutonum4InsertCompletedEventHandler(object sender, getAutonum4InsertCompletedEventArgs e);
     
     /// <remarks/>
@@ -15996,6 +16676,36 @@ namespace TP_Connector.AddInWebService {
             }
         }
     }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.9221.0")]
+    public delegate void uploadFileProcessTpConnectCompletedEventHandler(object sender, uploadFileProcessTpConnectCompletedEventArgs e);
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.9221.0")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    public partial class uploadFileProcessTpConnectCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+        
+        private object[] results;
+        
+        internal uploadFileProcessTpConnectCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+                base(exception, cancelled, userState) {
+            this.results = results;
+        }
+        
+        /// <remarks/>
+        public int Result {
+            get {
+                this.RaiseExceptionIfNecessary();
+                return ((int)(this.results[0]));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.9221.0")]
+    public delegate void createObjectWorkCommTpConnectCompletedEventHandler(object sender, System.ComponentModel.AsyncCompletedEventArgs e);
     
     /// <remarks/>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.9221.0")]
@@ -16579,6 +17289,32 @@ namespace TP_Connector.AddInWebService {
     
     /// <remarks/>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.9221.0")]
+    public delegate void getObjectFileListTpConnectCompletedEventHandler(object sender, getObjectFileListTpConnectCompletedEventArgs e);
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.9221.0")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    public partial class getObjectFileListTpConnectCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+        
+        private object[] results;
+        
+        internal getObjectFileListTpConnectCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+                base(exception, cancelled, userState) {
+            this.results = results;
+        }
+        
+        /// <remarks/>
+        public objectFileVO[] Result {
+            get {
+                this.RaiseExceptionIfNecessary();
+                return ((objectFileVO[])(this.results[0]));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.9221.0")]
     public delegate void getObjectSearchListCompletedEventHandler(object sender, getObjectSearchListCompletedEventArgs e);
     
     /// <remarks/>
@@ -16761,6 +17497,32 @@ namespace TP_Connector.AddInWebService {
     
     /// <remarks/>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.9221.0")]
+    public delegate void createObjectVersionTpConnectCompletedEventHandler(object sender, createObjectVersionTpConnectCompletedEventArgs e);
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.9221.0")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    public partial class createObjectVersionTpConnectCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+        
+        private object[] results;
+        
+        internal createObjectVersionTpConnectCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+                base(exception, cancelled, userState) {
+            this.results = results;
+        }
+        
+        /// <remarks/>
+        public int Result {
+            get {
+                this.RaiseExceptionIfNecessary();
+                return ((int)(this.results[0]));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.9221.0")]
     public delegate void modifyObjectState4FTPCompletedEventHandler(object sender, modifyObjectState4FTPCompletedEventArgs e);
     
     /// <remarks/>
@@ -16891,6 +17653,32 @@ namespace TP_Connector.AddInWebService {
     
     /// <remarks/>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.9221.0")]
+    public delegate void getSearchObjectListTpConnectCompletedEventHandler(object sender, getSearchObjectListTpConnectCompletedEventArgs e);
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.9221.0")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    public partial class getSearchObjectListTpConnectCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+        
+        private object[] results;
+        
+        internal getSearchObjectListTpConnectCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+                base(exception, cancelled, userState) {
+            this.results = results;
+        }
+        
+        /// <remarks/>
+        public objectVO[] Result {
+            get {
+                this.RaiseExceptionIfNecessary();
+                return ((objectVO[])(this.results[0]));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.9221.0")]
     public delegate void uploadFileProcess3DCompletedEventHandler(object sender, uploadFileProcess3DCompletedEventArgs e);
     
     /// <remarks/>
@@ -16963,6 +17751,32 @@ namespace TP_Connector.AddInWebService {
             get {
                 this.RaiseExceptionIfNecessary();
                 return ((string)(this.results[0]));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.9221.0")]
+    public delegate void createObject3DRefTpConnectCompletedEventHandler(object sender, createObject3DRefTpConnectCompletedEventArgs e);
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.9221.0")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    public partial class createObject3DRefTpConnectCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+        
+        private object[] results;
+        
+        internal createObject3DRefTpConnectCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+                base(exception, cancelled, userState) {
+            this.results = results;
+        }
+        
+        /// <remarks/>
+        public int Result {
+            get {
+                this.RaiseExceptionIfNecessary();
+                return ((int)(this.results[0]));
             }
         }
     }
@@ -17473,6 +18287,32 @@ namespace TP_Connector.AddInWebService {
             get {
                 this.RaiseExceptionIfNecessary();
                 return ((int)(this.results[0]));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.9221.0")]
+    public delegate void createObjectTpConnectCompletedEventHandler(object sender, createObjectTpConnectCompletedEventArgs e);
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.8.9221.0")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    public partial class createObjectTpConnectCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+        
+        private object[] results;
+        
+        internal createObjectTpConnectCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+                base(exception, cancelled, userState) {
+            this.results = results;
+        }
+        
+        /// <remarks/>
+        public string Result {
+            get {
+                this.RaiseExceptionIfNecessary();
+                return ((string)(this.results[0]));
             }
         }
     }

@@ -14,6 +14,8 @@
       <xs:element name="checkObjectResponse" type="tns:checkObjectResponse" />
       <xs:element name="checkObjectSolidworks" type="tns:checkObjectSolidworks" />
       <xs:element name="checkObjectSolidworksResponse" type="tns:checkObjectSolidworksResponse" />
+      <xs:element name="checkObjectTpConnect" type="tns:checkObjectTpConnect" />
+      <xs:element name="checkObjectTpConnectResponse" type="tns:checkObjectTpConnectResponse" />
       <xs:element name="checkPermission" type="tns:checkPermission" />
       <xs:element name="checkPermissionCatia" type="tns:checkPermissionCatia" />
       <xs:element name="checkPermissionCatiaResponse" type="tns:checkPermissionCatiaResponse" />
@@ -42,12 +44,16 @@
       <xs:element name="createFolderResponse" type="tns:createFolderResponse" />
       <xs:element name="createFolderSolidworks" type="tns:createFolderSolidworks" />
       <xs:element name="createFolderSolidworksResponse" type="tns:createFolderSolidworksResponse" />
+      <xs:element name="createFolderTpConnect" type="tns:createFolderTpConnect" />
+      <xs:element name="createFolderTpConnectResponse" type="tns:createFolderTpConnectResponse" />
       <xs:element name="createMarkup" type="tns:createMarkup" />
       <xs:element name="createMarkupResponse" type="tns:createMarkupResponse" />
       <xs:element name="createObject" type="tns:createObject" />
       <xs:element name="createObject3D" type="tns:createObject3D" />
       <xs:element name="createObject3DRef" type="tns:createObject3DRef" />
       <xs:element name="createObject3DRefResponse" type="tns:createObject3DRefResponse" />
+      <xs:element name="createObject3DRefTpConnect" type="tns:createObject3DRefTpConnect" />
+      <xs:element name="createObject3DRefTpConnectResponse" type="tns:createObject3DRefTpConnectResponse" />
       <xs:element name="createObject3DResponse" type="tns:createObject3DResponse" />
       <xs:element name="createObjectCatia" type="tns:createObjectCatia" />
       <xs:element name="createObjectCatiaResponse" type="tns:createObjectCatiaResponse" />
@@ -56,8 +62,14 @@
       <xs:element name="createObjectResponse" type="tns:createObjectResponse" />
       <xs:element name="createObjectSolidworks" type="tns:createObjectSolidworks" />
       <xs:element name="createObjectSolidworksResponse" type="tns:createObjectSolidworksResponse" />
+      <xs:element name="createObjectTpConnect" type="tns:createObjectTpConnect" />
+      <xs:element name="createObjectTpConnectResponse" type="tns:createObjectTpConnectResponse" />
       <xs:element name="createObjectVersion" type="tns:createObjectVersion" />
       <xs:element name="createObjectVersionResponse" type="tns:createObjectVersionResponse" />
+      <xs:element name="createObjectVersionTpConnect" type="tns:createObjectVersionTpConnect" />
+      <xs:element name="createObjectVersionTpConnectResponse" type="tns:createObjectVersionTpConnectResponse" />
+      <xs:element name="createObjectWorkCommTpConnect" type="tns:createObjectWorkCommTpConnect" />
+      <xs:element name="createObjectWorkCommTpConnectResponse" type="tns:createObjectWorkCommTpConnectResponse" />
       <xs:element name="currentViewerLicCnt" type="tns:currentViewerLicCnt" />
       <xs:element name="currentViewerLicCntResponse" type="tns:currentViewerLicCntResponse" />
       <xs:element name="currentViewerLicList" type="tns:currentViewerLicList" />
@@ -133,6 +145,8 @@
       <xs:element name="getObjectFileListResponse" type="tns:getObjectFileListResponse" />
       <xs:element name="getObjectFileListSolidworks" type="tns:getObjectFileListSolidworks" />
       <xs:element name="getObjectFileListSolidworksResponse" type="tns:getObjectFileListSolidworksResponse" />
+      <xs:element name="getObjectFileListTpConnect" type="tns:getObjectFileListTpConnect" />
+      <xs:element name="getObjectFileListTpConnectResponse" type="tns:getObjectFileListTpConnectResponse" />
       <xs:element name="getObjectInfo" type="tns:getObjectInfo" />
       <xs:element name="getObjectInfoResponse" type="tns:getObjectInfoResponse" />
       <xs:element name="getObjectList" type="tns:getObjectList" />
@@ -158,6 +172,8 @@
       <xs:element name="getSearchObjectListResponse" type="tns:getSearchObjectListResponse" />
       <xs:element name="getSearchObjectListSolidWorks" type="tns:getSearchObjectListSolidWorks" />
       <xs:element name="getSearchObjectListSolidWorksResponse" type="tns:getSearchObjectListSolidWorksResponse" />
+      <xs:element name="getSearchObjectListTpConnect" type="tns:getSearchObjectListTpConnect" />
+      <xs:element name="getSearchObjectListTpConnectResponse" type="tns:getSearchObjectListTpConnectResponse" />
       <xs:element name="getServerConfig" type="tns:getServerConfig" />
       <xs:element name="getServerConfigResponse" type="tns:getServerConfigResponse" />
       <xs:element name="getTagNoList" type="tns:getTagNoList" />
@@ -182,6 +198,10 @@
       <xs:element name="modifyObjectStateResponse" type="tns:modifyObjectStateResponse" />
       <xs:element name="modifyObjectStateSolidworks" type="tns:modifyObjectStateSolidworks" />
       <xs:element name="modifyObjectStateSolidworksResponse" type="tns:modifyObjectStateSolidworksResponse" />
+      <xs:element name="modifyObjectStateTpConnect" type="tns:modifyObjectStateTpConnect" />
+      <xs:element name="modifyObjectStateTpConnectResponse" type="tns:modifyObjectStateTpConnectResponse" />
+      <xs:element name="modifyObjectTpConnect" type="tns:modifyObjectTpConnect" />
+      <xs:element name="modifyObjectTpConnectResponse" type="tns:modifyObjectTpConnectResponse" />
       <xs:element name="removeFileInfo" type="tns:removeFileInfo" />
       <xs:element name="removeFileInfoResponse" type="tns:removeFileInfoResponse" />
       <xs:element name="removeFileUpload" type="tns:removeFileUpload" />
@@ -218,6 +238,8 @@
       <xs:element name="uploadFileProcessSolidworksResponse" type="tns:uploadFileProcessSolidworksResponse" />
       <xs:element name="uploadFileProcessTpAddin" type="tns:uploadFileProcessTpAddin" />
       <xs:element name="uploadFileProcessTpAddinResponse" type="tns:uploadFileProcessTpAddinResponse" />
+      <xs:element name="uploadFileProcessTpConnect" type="tns:uploadFileProcessTpConnect" />
+      <xs:element name="uploadFileProcessTpConnectResponse" type="tns:uploadFileProcessTpConnectResponse" />
       <xs:complexType name="getObjectFileList">
         <xs:sequence>
           <xs:element minOccurs="0" name="arg0" type="tns:objectSearchTO" />
@@ -500,6 +522,12 @@
           <xs:element minOccurs="0" name="workCommnet" type="xs:string" />
           <xs:element name="workSeq" type="xs:int" />
           <xs:element minOccurs="0" name="workspaceSeq" type="xs:int" />
+          <xs:element minOccurs="0" name="cDrawer" type="xs:string" />
+          <xs:element minOccurs="0" name="cDwgCnt" type="xs:string" />
+          <xs:element minOccurs="0" name="cDwgDate" type="xs:string" />
+          <xs:element minOccurs="0" name="cDwgNo2" type="xs:string" />
+          <xs:element minOccurs="0" name="cDwgSize" type="xs:string" />
+          <xs:element minOccurs="0" name="cStockNo" type="xs:string" />
           <xs:element minOccurs="0" name="pCode" type="xs:string" />
         </xs:sequence>
       </xs:complexType>
@@ -581,6 +609,25 @@
           <xs:element name="return" type="xs:int" />
         </xs:sequence>
       </xs:complexType>
+      <xs:complexType name="createObject3DRef">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="arg0" type="tns:object3DRefVO" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="object3DRefVO">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="childVerSeq" type="xs:int" />
+          <xs:element minOccurs="0" name="parentVerSeq" type="xs:int" />
+          <xs:element minOccurs="0" name="refSeq" type="xs:int" />
+          <xs:element minOccurs="0" name="regDt" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="regId" type="xs:string" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="createObject3DRefResponse">
+        <xs:sequence>
+          <xs:element name="return" type="xs:int" />
+        </xs:sequence>
+      </xs:complexType>
       <xs:complexType name="createFolder">
         <xs:sequence>
           <xs:element minOccurs="0" name="arg0" type="tns:folderVO4Addin" />
@@ -607,25 +654,6 @@
       <xs:complexType name="createFolderResponse">
         <xs:sequence>
           <xs:element minOccurs="0" name="return" type="xs:int" />
-        </xs:sequence>
-      </xs:complexType>
-      <xs:complexType name="createObject3DRef">
-        <xs:sequence>
-          <xs:element minOccurs="0" name="arg0" type="tns:object3DRefVO" />
-        </xs:sequence>
-      </xs:complexType>
-      <xs:complexType name="object3DRefVO">
-        <xs:sequence>
-          <xs:element minOccurs="0" name="childVerSeq" type="xs:int" />
-          <xs:element minOccurs="0" name="parentVerSeq" type="xs:int" />
-          <xs:element minOccurs="0" name="refSeq" type="xs:int" />
-          <xs:element minOccurs="0" name="regDt" type="xs:dateTime" />
-          <xs:element minOccurs="0" name="regId" type="xs:string" />
-        </xs:sequence>
-      </xs:complexType>
-      <xs:complexType name="createObject3DRefResponse">
-        <xs:sequence>
-          <xs:element name="return" type="xs:int" />
         </xs:sequence>
       </xs:complexType>
       <xs:complexType name="getObjectVerList">
@@ -687,6 +715,16 @@
       <xs:complexType name="getFolderRootResponse">
         <xs:sequence>
           <xs:element minOccurs="0" name="return" type="tns:folderVO4Addin" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="createFolderTpConnect">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="arg0" type="tns:folderVO4Addin" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="createFolderTpConnectResponse">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="return" type="xs:int" />
         </xs:sequence>
       </xs:complexType>
       <xs:complexType name="getClass">
@@ -903,6 +941,30 @@
       <xs:complexType name="getFolder3DRootResponse">
         <xs:sequence>
           <xs:element minOccurs="0" name="return" type="tns:folderVO4Addin" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="checkObjectTpConnect">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="arg0" type="xs:int" />
+          <xs:element minOccurs="0" name="arg1" type="xs:string" />
+          <xs:element minOccurs="0" name="arg2" type="xs:string" />
+          <xs:element minOccurs="0" name="arg3" type="xs:string" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="checkObjectTpConnectResponse">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="return" type="xs:string" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="modifyObjectStateTpConnect">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="arg0" type="tns:objectVO" />
+          <xs:element minOccurs="0" name="arg1" type="tns:objectFileVO" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="modifyObjectStateTpConnectResponse">
+        <xs:sequence>
+          <xs:element name="return" type="xs:int" />
         </xs:sequence>
       </xs:complexType>
       <xs:complexType name="createFile3DInfo">
@@ -1136,6 +1198,16 @@
           <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:objectVO" />
         </xs:sequence>
       </xs:complexType>
+      <xs:complexType name="modifyObjectTpConnect">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="arg0" type="tns:objectVO" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="modifyObjectTpConnectResponse">
+        <xs:sequence>
+          <xs:element name="return" type="xs:int" />
+        </xs:sequence>
+      </xs:complexType>
       <xs:complexType name="getAutonum4Insert">
         <xs:sequence>
           <xs:element minOccurs="0" name="arg0" type="tns:autonumSearchTO" />
@@ -1296,6 +1368,24 @@
         <xs:sequence>
           <xs:element name="return" type="xs:int" />
         </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="uploadFileProcessTpConnect">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="arg0" type="tns:objectFileVO" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="uploadFileProcessTpConnectResponse">
+        <xs:sequence>
+          <xs:element name="return" type="xs:int" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="createObjectWorkCommTpConnect">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="arg0" type="tns:objectVO" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="createObjectWorkCommTpConnectResponse">
+        <xs:sequence />
       </xs:complexType>
       <xs:complexType name="getFolder3DList">
         <xs:sequence>
@@ -1545,6 +1635,16 @@
           <xs:element name="return" type="xs:int" />
         </xs:sequence>
       </xs:complexType>
+      <xs:complexType name="getObjectFileListTpConnect">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="arg0" type="tns:objectSearchTO" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="getObjectFileListTpConnectResponse">
+        <xs:sequence>
+          <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:objectFileVO" />
+        </xs:sequence>
+      </xs:complexType>
       <xs:complexType name="getObjectSearchList">
         <xs:sequence>
           <xs:element minOccurs="0" name="arg0" type="tns:searchTO" />
@@ -1574,6 +1674,7 @@
           <xs:element name="subFolder" type="xs:boolean" />
           <xs:element minOccurs="0" name="user" type="xs:string" />
           <xs:element minOccurs="0" name="userId" type="xs:string" />
+          <xs:element minOccurs="0" maxOccurs="unbounded" name="cStockNoList" nillable="true" type="xs:string" />
         </xs:sequence>
       </xs:complexType>
       <xs:complexType name="loginVO">
@@ -1630,6 +1731,12 @@
           <xs:element minOccurs="0" name="updUserNm" type="xs:string" />
           <xs:element name="verSeq" type="xs:int" />
           <xs:element name="version" type="xs:int" />
+          <xs:element minOccurs="0" name="cDrawer" type="xs:string" />
+          <xs:element minOccurs="0" name="cDwgCnt" type="xs:string" />
+          <xs:element minOccurs="0" name="cDwgDate" type="xs:string" />
+          <xs:element minOccurs="0" name="cDwgNo2" type="xs:string" />
+          <xs:element minOccurs="0" name="cDwgSize" type="xs:string" />
+          <xs:element minOccurs="0" name="cStockNo" type="xs:string" />
         </xs:sequence>
       </xs:complexType>
       <xs:complexType name="getObjectSearchListResponse">
@@ -1699,6 +1806,17 @@
           <xs:element minOccurs="0" name="return" type="tns:viewerLicVO" />
         </xs:sequence>
       </xs:complexType>
+      <xs:complexType name="createObjectVersionTpConnect">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="arg0" type="xs:int" />
+          <xs:element minOccurs="0" name="arg1" type="xs:string" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="createObjectVersionTpConnectResponse">
+        <xs:sequence>
+          <xs:element name="return" type="xs:int" />
+        </xs:sequence>
+      </xs:complexType>
       <xs:complexType name="modifyObjectState4FTP">
         <xs:sequence>
           <xs:element minOccurs="0" name="arg0" type="tns:objectVO" />
@@ -1742,6 +1860,17 @@
       <xs:complexType name="getCurrentDateResponse">
         <xs:sequence>
           <xs:element minOccurs="0" name="return" type="xs:string" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="getSearchObjectListTpConnect">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="arg0" type="tns:objectSearchTO" />
+          <xs:element minOccurs="0" name="arg1" type="tns:pagingSearchTO" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="getSearchObjectListTpConnectResponse">
+        <xs:sequence>
+          <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="tns:objectVO" />
         </xs:sequence>
       </xs:complexType>
       <xs:complexType name="uploadFileProcess3D">
@@ -1798,6 +1927,16 @@
       <xs:complexType name="uploadFileProcessBatchResponse">
         <xs:sequence>
           <xs:element minOccurs="0" name="return" type="xs:string" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="createObject3DRefTpConnect">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="arg0" type="tns:object3DRefVO" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="createObject3DRefTpConnectResponse">
+        <xs:sequence>
+          <xs:element name="return" type="xs:int" />
         </xs:sequence>
       </xs:complexType>
       <xs:complexType name="getTagNoList">
@@ -2025,6 +2164,16 @@
           <xs:element name="return" type="xs:int" />
         </xs:sequence>
       </xs:complexType>
+      <xs:complexType name="createObjectTpConnect">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="arg0" type="tns:objectVO" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="createObjectTpConnectResponse">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="return" type="xs:string" />
+        </xs:sequence>
+      </xs:complexType>
       <xs:complexType name="getPCodeList">
         <xs:sequence>
           <xs:element minOccurs="0" name="arg0" type="tns:objectVO" />
@@ -2185,6 +2334,12 @@
   <wsdl:message name="getFolderRoot">
     <wsdl:part name="parameters" element="tns:getFolderRoot" />
   </wsdl:message>
+  <wsdl:message name="createFolderTpConnect">
+    <wsdl:part name="parameters" element="tns:createFolderTpConnect" />
+  </wsdl:message>
+  <wsdl:message name="createFolderTpConnectResponse">
+    <wsdl:part name="parameters" element="tns:createFolderTpConnectResponse" />
+  </wsdl:message>
   <wsdl:message name="modifyMarkupResponse">
     <wsdl:part name="parameters" element="tns:modifyMarkupResponse" />
   </wsdl:message>
@@ -2275,6 +2430,9 @@
   <wsdl:message name="uploadFileProcessCadAddin">
     <wsdl:part name="parameters" element="tns:uploadFileProcessCadAddin" />
   </wsdl:message>
+  <wsdl:message name="uploadFileProcessTpConnect">
+    <wsdl:part name="parameters" element="tns:uploadFileProcessTpConnect" />
+  </wsdl:message>
   <wsdl:message name="removeFileInfoResponse">
     <wsdl:part name="parameters" element="tns:removeFileInfoResponse" />
   </wsdl:message>
@@ -2283,6 +2441,9 @@
   </wsdl:message>
   <wsdl:message name="uploadFileProcessTpAddinResponse">
     <wsdl:part name="parameters" element="tns:uploadFileProcessTpAddinResponse" />
+  </wsdl:message>
+  <wsdl:message name="getSearchObjectListTpConnectResponse">
+    <wsdl:part name="parameters" element="tns:getSearchObjectListTpConnectResponse" />
   </wsdl:message>
   <wsdl:message name="getAttributeIncludeClassTotalCount">
     <wsdl:part name="parameters" element="tns:getAttributeIncludeClassTotalCount" />
@@ -2326,6 +2487,9 @@
   <wsdl:message name="removeMarkup">
     <wsdl:part name="parameters" element="tns:removeMarkup" />
   </wsdl:message>
+  <wsdl:message name="getObjectFileListTpConnect">
+    <wsdl:part name="parameters" element="tns:getObjectFileListTpConnect" />
+  </wsdl:message>
   <wsdl:message name="uploadFileProcessCatia">
     <wsdl:part name="parameters" element="tns:uploadFileProcessCatia" />
   </wsdl:message>
@@ -2350,6 +2514,9 @@
   <wsdl:message name="selectViewerLicInfo">
     <wsdl:part name="parameters" element="tns:selectViewerLicInfo" />
   </wsdl:message>
+  <wsdl:message name="createObjectVersionTpConnect">
+    <wsdl:part name="parameters" element="tns:createObjectVersionTpConnect" />
+  </wsdl:message>
   <wsdl:message name="modifyObjectState4FTP">
     <wsdl:part name="parameters" element="tns:modifyObjectState4FTP" />
   </wsdl:message>
@@ -2362,6 +2529,9 @@
   <wsdl:message name="getCurrentDate">
     <wsdl:part name="parameters" element="tns:getCurrentDate" />
   </wsdl:message>
+  <wsdl:message name="getSearchObjectListTpConnect">
+    <wsdl:part name="parameters" element="tns:getSearchObjectListTpConnect" />
+  </wsdl:message>
   <wsdl:message name="uploadFileProcess3D">
     <wsdl:part name="parameters" element="tns:uploadFileProcess3D" />
   </wsdl:message>
@@ -2370,6 +2540,12 @@
   </wsdl:message>
   <wsdl:message name="uploadFileProcessBatch">
     <wsdl:part name="parameters" element="tns:uploadFileProcessBatch" />
+  </wsdl:message>
+  <wsdl:message name="createObject3DRefTpConnect">
+    <wsdl:part name="parameters" element="tns:createObject3DRefTpConnect" />
+  </wsdl:message>
+  <wsdl:message name="createObjectVersionTpConnectResponse">
+    <wsdl:part name="parameters" element="tns:createObjectVersionTpConnectResponse" />
   </wsdl:message>
   <wsdl:message name="getFileInfo">
     <wsdl:part name="parameters" element="tns:getFileInfo" />
@@ -2388,6 +2564,9 @@
   </wsdl:message>
   <wsdl:message name="securityLvlInfoResponse">
     <wsdl:part name="parameters" element="tns:securityLvlInfoResponse" />
+  </wsdl:message>
+  <wsdl:message name="uploadFileProcessTpConnectResponse">
+    <wsdl:part name="parameters" element="tns:uploadFileProcessTpConnectResponse" />
   </wsdl:message>
   <wsdl:message name="createFileInfoResponse">
     <wsdl:part name="parameters" element="tns:createFileInfoResponse" />
@@ -2422,6 +2601,9 @@
   <wsdl:message name="getItemHstListSolidworksResponse">
     <wsdl:part name="parameters" element="tns:getItemHstListSolidworksResponse" />
   </wsdl:message>
+  <wsdl:message name="createObjectTpConnect">
+    <wsdl:part name="parameters" element="tns:createObjectTpConnect" />
+  </wsdl:message>
   <wsdl:message name="createObjectCatiaResponse">
     <wsdl:part name="parameters" element="tns:createObjectCatiaResponse" />
   </wsdl:message>
@@ -2430,6 +2612,9 @@
   </wsdl:message>
   <wsdl:message name="currentViewerLicListResponse">
     <wsdl:part name="parameters" element="tns:currentViewerLicListResponse" />
+  </wsdl:message>
+  <wsdl:message name="getObjectFileListTpConnectResponse">
+    <wsdl:part name="parameters" element="tns:getObjectFileListTpConnectResponse" />
   </wsdl:message>
   <wsdl:message name="getFolder3DRootCatiaResponse">
     <wsdl:part name="parameters" element="tns:getFolder3DRootCatiaResponse" />
@@ -2452,11 +2637,11 @@
   <wsdl:message name="getItemHstListCatia">
     <wsdl:part name="parameters" element="tns:getItemHstListCatia" />
   </wsdl:message>
-  <wsdl:message name="createFolder">
-    <wsdl:part name="parameters" element="tns:createFolder" />
-  </wsdl:message>
   <wsdl:message name="createObject3DRef">
     <wsdl:part name="parameters" element="tns:createObject3DRef" />
+  </wsdl:message>
+  <wsdl:message name="createFolder">
+    <wsdl:part name="parameters" element="tns:createFolder" />
   </wsdl:message>
   <wsdl:message name="checkObject">
     <wsdl:part name="parameters" element="tns:checkObject" />
@@ -2499,6 +2684,15 @@
   </wsdl:message>
   <wsdl:message name="checkItemCodeCatiaResponse">
     <wsdl:part name="parameters" element="tns:checkItemCodeCatiaResponse" />
+  </wsdl:message>
+  <wsdl:message name="modifyObjectTpConnectResponse">
+    <wsdl:part name="parameters" element="tns:modifyObjectTpConnectResponse" />
+  </wsdl:message>
+  <wsdl:message name="checkObjectTpConnect">
+    <wsdl:part name="parameters" element="tns:checkObjectTpConnect" />
+  </wsdl:message>
+  <wsdl:message name="modifyObjectStateTpConnect">
+    <wsdl:part name="parameters" element="tns:modifyObjectStateTpConnect" />
   </wsdl:message>
   <wsdl:message name="getAttributeResponse">
     <wsdl:part name="parameters" element="tns:getAttributeResponse" />
@@ -2554,6 +2748,9 @@
   <wsdl:message name="createObjectFileResponse">
     <wsdl:part name="parameters" element="tns:createObjectFileResponse" />
   </wsdl:message>
+  <wsdl:message name="modifyObjectTpConnect">
+    <wsdl:part name="parameters" element="tns:modifyObjectTpConnect" />
+  </wsdl:message>
   <wsdl:message name="getAutonum4Insert">
     <wsdl:part name="parameters" element="tns:getAutonum4Insert" />
   </wsdl:message>
@@ -2590,6 +2787,9 @@
   <wsdl:message name="getItemList">
     <wsdl:part name="parameters" element="tns:getItemList" />
   </wsdl:message>
+  <wsdl:message name="modifyObjectStateTpConnectResponse">
+    <wsdl:part name="parameters" element="tns:modifyObjectStateTpConnectResponse" />
+  </wsdl:message>
   <wsdl:message name="getObjectFileListResponse">
     <wsdl:part name="parameters" element="tns:getObjectFileListResponse" />
   </wsdl:message>
@@ -2613,6 +2813,9 @@
   </wsdl:message>
   <wsdl:message name="getObjectVerListResponse">
     <wsdl:part name="parameters" element="tns:getObjectVerListResponse" />
+  </wsdl:message>
+  <wsdl:message name="createObjectWorkCommTpConnect">
+    <wsdl:part name="parameters" element="tns:createObjectWorkCommTpConnect" />
   </wsdl:message>
   <wsdl:message name="modifyObjectStateCatiaResponse">
     <wsdl:part name="parameters" element="tns:modifyObjectStateCatiaResponse" />
@@ -2691,6 +2894,9 @@
   </wsdl:message>
   <wsdl:message name="getObjectVerCntResponse">
     <wsdl:part name="parameters" element="tns:getObjectVerCntResponse" />
+  </wsdl:message>
+  <wsdl:message name="checkObjectTpConnectResponse">
+    <wsdl:part name="parameters" element="tns:checkObjectTpConnectResponse" />
   </wsdl:message>
   <wsdl:message name="getCurrentFolder">
     <wsdl:part name="parameters" element="tns:getCurrentFolder" />
@@ -2773,6 +2979,9 @@
   <wsdl:message name="selectViewerLicInfoResponse">
     <wsdl:part name="parameters" element="tns:selectViewerLicInfoResponse" />
   </wsdl:message>
+  <wsdl:message name="createObjectWorkCommTpConnectResponse">
+    <wsdl:part name="parameters" element="tns:createObjectWorkCommTpConnectResponse" />
+  </wsdl:message>
   <wsdl:message name="modifyObjectState">
     <wsdl:part name="parameters" element="tns:modifyObjectState" />
   </wsdl:message>
@@ -2784,6 +2993,9 @@
   </wsdl:message>
   <wsdl:message name="modifyObjectCatia">
     <wsdl:part name="parameters" element="tns:modifyObjectCatia" />
+  </wsdl:message>
+  <wsdl:message name="createObject3DRefTpConnectResponse">
+    <wsdl:part name="parameters" element="tns:createObject3DRefTpConnectResponse" />
   </wsdl:message>
   <wsdl:message name="logoutProcessResponse">
     <wsdl:part name="parameters" element="tns:logoutProcessResponse" />
@@ -2814,6 +3026,9 @@
   </wsdl:message>
   <wsdl:message name="createObject3D">
     <wsdl:part name="parameters" element="tns:createObject3D" />
+  </wsdl:message>
+  <wsdl:message name="createObjectTpConnectResponse">
+    <wsdl:part name="parameters" element="tns:createObjectTpConnectResponse" />
   </wsdl:message>
   <wsdl:portType name="AddinIF">
     <wsdl:operation name="getObjectFileList">
@@ -2846,14 +3061,14 @@
       <wsdl:output name="getObjectTotalCntResponse" message="tns:getObjectTotalCntResponse" />
       <wsdl:fault name="Exception" message="tns:Exception" />
     </wsdl:operation>
-    <wsdl:operation name="createFolder">
-      <wsdl:input name="createFolder" message="tns:createFolder" />
-      <wsdl:output name="createFolderResponse" message="tns:createFolderResponse" />
-      <wsdl:fault name="Exception" message="tns:Exception" />
-    </wsdl:operation>
     <wsdl:operation name="createObject3DRef">
       <wsdl:input name="createObject3DRef" message="tns:createObject3DRef" />
       <wsdl:output name="createObject3DRefResponse" message="tns:createObject3DRefResponse" />
+      <wsdl:fault name="Exception" message="tns:Exception" />
+    </wsdl:operation>
+    <wsdl:operation name="createFolder">
+      <wsdl:input name="createFolder" message="tns:createFolder" />
+      <wsdl:output name="createFolderResponse" message="tns:createFolderResponse" />
       <wsdl:fault name="Exception" message="tns:Exception" />
     </wsdl:operation>
     <wsdl:operation name="getObjectVerList">
@@ -2874,6 +3089,11 @@
     <wsdl:operation name="getFolderRoot">
       <wsdl:input name="getFolderRoot" message="tns:getFolderRoot" />
       <wsdl:output name="getFolderRootResponse" message="tns:getFolderRootResponse" />
+      <wsdl:fault name="Exception" message="tns:Exception" />
+    </wsdl:operation>
+    <wsdl:operation name="createFolderTpConnect">
+      <wsdl:input name="createFolderTpConnect" message="tns:createFolderTpConnect" />
+      <wsdl:output name="createFolderTpConnectResponse" message="tns:createFolderTpConnectResponse" />
       <wsdl:fault name="Exception" message="tns:Exception" />
     </wsdl:operation>
     <wsdl:operation name="getClass">
@@ -2924,6 +3144,16 @@
     <wsdl:operation name="getFolder3DRoot">
       <wsdl:input name="getFolder3DRoot" message="tns:getFolder3DRoot" />
       <wsdl:output name="getFolder3DRootResponse" message="tns:getFolder3DRootResponse" />
+      <wsdl:fault name="Exception" message="tns:Exception" />
+    </wsdl:operation>
+    <wsdl:operation name="checkObjectTpConnect">
+      <wsdl:input name="checkObjectTpConnect" message="tns:checkObjectTpConnect" />
+      <wsdl:output name="checkObjectTpConnectResponse" message="tns:checkObjectTpConnectResponse" />
+      <wsdl:fault name="Exception" message="tns:Exception" />
+    </wsdl:operation>
+    <wsdl:operation name="modifyObjectStateTpConnect">
+      <wsdl:input name="modifyObjectStateTpConnect" message="tns:modifyObjectStateTpConnect" />
+      <wsdl:output name="modifyObjectStateTpConnectResponse" message="tns:modifyObjectStateTpConnectResponse" />
       <wsdl:fault name="Exception" message="tns:Exception" />
     </wsdl:operation>
     <wsdl:operation name="createFile3DInfo">
@@ -2996,6 +3226,11 @@
       <wsdl:output name="getSearchObjectListSolidWorksResponse" message="tns:getSearchObjectListSolidWorksResponse" />
       <wsdl:fault name="Exception" message="tns:Exception" />
     </wsdl:operation>
+    <wsdl:operation name="modifyObjectTpConnect">
+      <wsdl:input name="modifyObjectTpConnect" message="tns:modifyObjectTpConnect" />
+      <wsdl:output name="modifyObjectTpConnectResponse" message="tns:modifyObjectTpConnectResponse" />
+      <wsdl:fault name="Exception" message="tns:Exception" />
+    </wsdl:operation>
     <wsdl:operation name="getAutonum4Insert">
       <wsdl:input name="getAutonum4Insert" message="tns:getAutonum4Insert" />
       <wsdl:output name="getAutonum4InsertResponse" message="tns:getAutonum4InsertResponse" />
@@ -3054,6 +3289,16 @@
     <wsdl:operation name="uploadFileProcessCadAddin">
       <wsdl:input name="uploadFileProcessCadAddin" message="tns:uploadFileProcessCadAddin" />
       <wsdl:output name="uploadFileProcessCadAddinResponse" message="tns:uploadFileProcessCadAddinResponse" />
+      <wsdl:fault name="Exception" message="tns:Exception" />
+    </wsdl:operation>
+    <wsdl:operation name="uploadFileProcessTpConnect">
+      <wsdl:input name="uploadFileProcessTpConnect" message="tns:uploadFileProcessTpConnect" />
+      <wsdl:output name="uploadFileProcessTpConnectResponse" message="tns:uploadFileProcessTpConnectResponse" />
+      <wsdl:fault name="Exception" message="tns:Exception" />
+    </wsdl:operation>
+    <wsdl:operation name="createObjectWorkCommTpConnect">
+      <wsdl:input name="createObjectWorkCommTpConnect" message="tns:createObjectWorkCommTpConnect" />
+      <wsdl:output name="createObjectWorkCommTpConnectResponse" message="tns:createObjectWorkCommTpConnectResponse" />
       <wsdl:fault name="Exception" message="tns:Exception" />
     </wsdl:operation>
     <wsdl:operation name="getFolder3DList">
@@ -3166,6 +3411,11 @@
       <wsdl:output name="removeMarkupResponse" message="tns:removeMarkupResponse" />
       <wsdl:fault name="Exception" message="tns:Exception" />
     </wsdl:operation>
+    <wsdl:operation name="getObjectFileListTpConnect">
+      <wsdl:input name="getObjectFileListTpConnect" message="tns:getObjectFileListTpConnect" />
+      <wsdl:output name="getObjectFileListTpConnectResponse" message="tns:getObjectFileListTpConnectResponse" />
+      <wsdl:fault name="Exception" message="tns:Exception" />
+    </wsdl:operation>
     <wsdl:operation name="getObjectSearchList">
       <wsdl:input name="getObjectSearchList" message="tns:getObjectSearchList" />
       <wsdl:output name="getObjectSearchListResponse" message="tns:getObjectSearchListResponse" />
@@ -3201,6 +3451,11 @@
       <wsdl:output name="selectViewerLicInfoResponse" message="tns:selectViewerLicInfoResponse" />
       <wsdl:fault name="Exception" message="tns:Exception" />
     </wsdl:operation>
+    <wsdl:operation name="createObjectVersionTpConnect">
+      <wsdl:input name="createObjectVersionTpConnect" message="tns:createObjectVersionTpConnect" />
+      <wsdl:output name="createObjectVersionTpConnectResponse" message="tns:createObjectVersionTpConnectResponse" />
+      <wsdl:fault name="Exception" message="tns:Exception" />
+    </wsdl:operation>
     <wsdl:operation name="modifyObjectState4FTP">
       <wsdl:input name="modifyObjectState4FTP" message="tns:modifyObjectState4FTP" />
       <wsdl:output name="modifyObjectState4FTPResponse" message="tns:modifyObjectState4FTPResponse" />
@@ -3226,6 +3481,11 @@
       <wsdl:output name="getCurrentDateResponse" message="tns:getCurrentDateResponse" />
       <wsdl:fault name="Exception" message="tns:Exception" />
     </wsdl:operation>
+    <wsdl:operation name="getSearchObjectListTpConnect">
+      <wsdl:input name="getSearchObjectListTpConnect" message="tns:getSearchObjectListTpConnect" />
+      <wsdl:output name="getSearchObjectListTpConnectResponse" message="tns:getSearchObjectListTpConnectResponse" />
+      <wsdl:fault name="Exception" message="tns:Exception" />
+    </wsdl:operation>
     <wsdl:operation name="uploadFileProcess3D">
       <wsdl:input name="uploadFileProcess3D" message="tns:uploadFileProcess3D" />
       <wsdl:output name="uploadFileProcess3DResponse" message="tns:uploadFileProcess3DResponse" />
@@ -3239,6 +3499,11 @@
     <wsdl:operation name="uploadFileProcessBatch">
       <wsdl:input name="uploadFileProcessBatch" message="tns:uploadFileProcessBatch" />
       <wsdl:output name="uploadFileProcessBatchResponse" message="tns:uploadFileProcessBatchResponse" />
+      <wsdl:fault name="Exception" message="tns:Exception" />
+    </wsdl:operation>
+    <wsdl:operation name="createObject3DRefTpConnect">
+      <wsdl:input name="createObject3DRefTpConnect" message="tns:createObject3DRefTpConnect" />
+      <wsdl:output name="createObject3DRefTpConnectResponse" message="tns:createObject3DRefTpConnectResponse" />
       <wsdl:fault name="Exception" message="tns:Exception" />
     </wsdl:operation>
     <wsdl:operation name="getTagNoList">
@@ -3336,6 +3601,11 @@
       <wsdl:output name="converter3DResponse" message="tns:converter3DResponse" />
       <wsdl:fault name="Exception" message="tns:Exception" />
     </wsdl:operation>
+    <wsdl:operation name="createObjectTpConnect">
+      <wsdl:input name="createObjectTpConnect" message="tns:createObjectTpConnect" />
+      <wsdl:output name="createObjectTpConnectResponse" message="tns:createObjectTpConnectResponse" />
+      <wsdl:fault name="Exception" message="tns:Exception" />
+    </wsdl:operation>
     <wsdl:operation name="getPCodeList">
       <wsdl:input name="getPCodeList" message="tns:getPCodeList" />
       <wsdl:output name="getPCodeListResponse" message="tns:getPCodeListResponse" />
@@ -3431,24 +3701,24 @@
         <soap:fault use="literal" name="Exception" namespace="" />
       </wsdl:fault>
     </wsdl:operation>
-    <wsdl:operation name="createFolder">
-      <soap:operation soapAction="" style="document" />
-      <wsdl:input name="createFolder">
-        <soap:body use="literal" />
-      </wsdl:input>
-      <wsdl:output name="createFolderResponse">
-        <soap:body use="literal" />
-      </wsdl:output>
-      <wsdl:fault name="Exception">
-        <soap:fault use="literal" name="Exception" namespace="" />
-      </wsdl:fault>
-    </wsdl:operation>
     <wsdl:operation name="createObject3DRef">
       <soap:operation soapAction="" style="document" />
       <wsdl:input name="createObject3DRef">
         <soap:body use="literal" />
       </wsdl:input>
       <wsdl:output name="createObject3DRefResponse">
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="Exception">
+        <soap:fault use="literal" name="Exception" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="createFolder">
+      <soap:operation soapAction="" style="document" />
+      <wsdl:input name="createFolder">
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="createFolderResponse">
         <soap:body use="literal" />
       </wsdl:output>
       <wsdl:fault name="Exception">
@@ -3521,6 +3791,18 @@
         <soap:body use="literal" />
       </wsdl:input>
       <wsdl:output name="getClassResponse">
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="Exception">
+        <soap:fault use="literal" name="Exception" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="createFolderTpConnect">
+      <soap:operation soapAction="" style="document" />
+      <wsdl:input name="createFolderTpConnect">
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="createFolderTpConnectResponse">
         <soap:body use="literal" />
       </wsdl:output>
       <wsdl:fault name="Exception">
@@ -3617,6 +3899,30 @@
         <soap:body use="literal" />
       </wsdl:input>
       <wsdl:output name="getFolder3DRootResponse">
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="Exception">
+        <soap:fault use="literal" name="Exception" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="checkObjectTpConnect">
+      <soap:operation soapAction="" style="document" />
+      <wsdl:input name="checkObjectTpConnect">
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="checkObjectTpConnectResponse">
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="Exception">
+        <soap:fault use="literal" name="Exception" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="modifyObjectStateTpConnect">
+      <soap:operation soapAction="" style="document" />
+      <wsdl:input name="modifyObjectStateTpConnect">
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="modifyObjectStateTpConnectResponse">
         <soap:body use="literal" />
       </wsdl:output>
       <wsdl:fault name="Exception">
@@ -3791,6 +4097,18 @@
         <soap:fault use="literal" name="Exception" namespace="" />
       </wsdl:fault>
     </wsdl:operation>
+    <wsdl:operation name="modifyObjectTpConnect">
+      <soap:operation soapAction="" style="document" />
+      <wsdl:input name="modifyObjectTpConnect">
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="modifyObjectTpConnectResponse">
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="Exception">
+        <soap:fault use="literal" name="Exception" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
     <wsdl:operation name="getAutonum4Insert">
       <soap:operation soapAction="" style="document" />
       <wsdl:input name="getAutonum4Insert">
@@ -3929,6 +4247,30 @@
         <soap:body use="literal" />
       </wsdl:input>
       <wsdl:output name="uploadFileProcessCadAddinResponse">
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="Exception">
+        <soap:fault use="literal" name="Exception" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="uploadFileProcessTpConnect">
+      <soap:operation soapAction="" style="document" />
+      <wsdl:input name="uploadFileProcessTpConnect">
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="uploadFileProcessTpConnectResponse">
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="Exception">
+        <soap:fault use="literal" name="Exception" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="createObjectWorkCommTpConnect">
+      <soap:operation soapAction="" style="document" />
+      <wsdl:input name="createObjectWorkCommTpConnect">
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="createObjectWorkCommTpConnectResponse">
         <soap:body use="literal" />
       </wsdl:output>
       <wsdl:fault name="Exception">
@@ -4199,6 +4541,18 @@
         <soap:fault use="literal" name="Exception" namespace="" />
       </wsdl:fault>
     </wsdl:operation>
+    <wsdl:operation name="getObjectFileListTpConnect">
+      <soap:operation soapAction="" style="document" />
+      <wsdl:input name="getObjectFileListTpConnect">
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="getObjectFileListTpConnectResponse">
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="Exception">
+        <soap:fault use="literal" name="Exception" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
     <wsdl:operation name="getObjectSearchList">
       <soap:operation soapAction="" style="document" />
       <wsdl:input name="getObjectSearchList">
@@ -4283,6 +4637,18 @@
         <soap:fault use="literal" name="Exception" namespace="" />
       </wsdl:fault>
     </wsdl:operation>
+    <wsdl:operation name="createObjectVersionTpConnect">
+      <soap:operation soapAction="" style="document" />
+      <wsdl:input name="createObjectVersionTpConnect">
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="createObjectVersionTpConnectResponse">
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="Exception">
+        <soap:fault use="literal" name="Exception" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
     <wsdl:operation name="modifyObjectState4FTP">
       <soap:operation soapAction="" style="document" />
       <wsdl:input name="modifyObjectState4FTP">
@@ -4343,6 +4709,18 @@
         <soap:fault use="literal" name="Exception" namespace="" />
       </wsdl:fault>
     </wsdl:operation>
+    <wsdl:operation name="getSearchObjectListTpConnect">
+      <soap:operation soapAction="" style="document" />
+      <wsdl:input name="getSearchObjectListTpConnect">
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="getSearchObjectListTpConnectResponse">
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="Exception">
+        <soap:fault use="literal" name="Exception" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
     <wsdl:operation name="uploadFileProcess3D">
       <soap:operation soapAction="" style="document" />
       <wsdl:input name="uploadFileProcess3D">
@@ -4373,6 +4751,18 @@
         <soap:body use="literal" />
       </wsdl:input>
       <wsdl:output name="uploadFileProcessBatchResponse">
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="Exception">
+        <soap:fault use="literal" name="Exception" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="createObject3DRefTpConnect">
+      <soap:operation soapAction="" style="document" />
+      <wsdl:input name="createObject3DRefTpConnect">
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="createObject3DRefTpConnectResponse">
         <soap:body use="literal" />
       </wsdl:output>
       <wsdl:fault name="Exception">
@@ -4601,6 +4991,18 @@
         <soap:body use="literal" />
       </wsdl:input>
       <wsdl:output name="converter3DResponse">
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="Exception">
+        <soap:fault use="literal" name="Exception" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="createObjectTpConnect">
+      <soap:operation soapAction="" style="document" />
+      <wsdl:input name="createObjectTpConnect">
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="createObjectTpConnectResponse">
         <soap:body use="literal" />
       </wsdl:output>
       <wsdl:fault name="Exception">

@@ -2,15 +2,8 @@
 {
     partial class Main
     {
-        /// <summary>
-        /// Required designer variable.
-        /// </summary>
         private System.ComponentModel.IContainer components = null;
 
-        /// <summary>
-        /// Clean up any resources being used.
-        /// </summary>
-        /// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
         protected override void Dispose(bool disposing)
         {
             if (disposing && (components != null))
@@ -18,243 +11,133 @@
                 components.Dispose();
             }
             base.Dispose(disposing);
-
         }
 
         #region Windows Form Designer generated code
 
-        /// <summary>
-        /// Required method for Designer support - do not modify
-        /// the contents of this method with the code editor.
-        /// </summary>
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Main));
-            this.tabFormControl1 = new DevExpress.XtraBars.TabFormControl();
-            this.barLabel = new DevExpress.XtraBars.BarStaticItem();
-            this.tabFormDefaultManager1 = new DevExpress.XtraBars.TabFormDefaultManager();
-            this.barDockControlTop = new DevExpress.XtraBars.BarDockControl();
-            this.barDockControlBottom = new DevExpress.XtraBars.BarDockControl();
-            this.barDockControlLeft = new DevExpress.XtraBars.BarDockControl();
-            this.barDockControlRight = new DevExpress.XtraBars.BarDockControl();
-            this.tabFormPage1 = new DevExpress.XtraBars.TabFormPage();
-            this.tabFormContentContainer1 = new DevExpress.XtraBars.TabFormContentContainer();
-            this.splitContainerControl1 = new DevExpress.XtraEditors.SplitContainerControl();
-            this.tlFolder = new DevExpress.XtraTreeList.TreeList();
-            this.colFolder = new DevExpress.XtraTreeList.Columns.TreeListColumn();
-            this.pnlSystemHeader = new DevExpress.XtraEditors.PanelControl();
-            this.folderSerachButton = new DevExpress.XtraEditors.SimpleButton();
-            this.lblSystemTitle = new DevExpress.XtraEditors.LabelControl();
-            this.tlData = new DevExpress.XtraTreeList.TreeList();
-            this.colName = new DevExpress.XtraTreeList.Columns.TreeListColumn();
-            this.colVersion = new DevExpress.XtraTreeList.Columns.TreeListColumn();
-            this.colGrade = new DevExpress.XtraTreeList.Columns.TreeListColumn();
-            this.pnlTopMenu = new DevExpress.XtraEditors.PanelControl();
-            this.btnRun = new DevExpress.XtraEditors.SimpleButton();
-            this.btnCheckIn = new DevExpress.XtraEditors.SimpleButton();
-            this.btnRefresh = new DevExpress.XtraEditors.SimpleButton();
-            this.tabFormPage2 = new DevExpress.XtraBars.TabFormPage();
-            this.tabFormContentContainer2 = new DevExpress.XtraBars.TabFormContentContainer();
-            this.splitContainerControl2 = new DevExpress.XtraEditors.SplitContainerControl();
-            this.tlFolder2 = new DevExpress.XtraTreeList.TreeList();
-            this.colFolder2 = new DevExpress.XtraTreeList.Columns.TreeListColumn();
-            this.pnlSystemHeader2 = new DevExpress.XtraEditors.PanelControl();
-            this.lblSystemTitle2 = new DevExpress.XtraEditors.LabelControl();
-            this.newAddGrid = new DevExpress.XtraTreeList.TreeList();
-            this.newAddObjNm = new DevExpress.XtraTreeList.Columns.TreeListColumn();
-            this.newAddVersion = new DevExpress.XtraTreeList.Columns.TreeListColumn();
-            this.newAddObjState = new DevExpress.XtraTreeList.Columns.TreeListColumn();
-            this.pnlTopMenu2 = new DevExpress.XtraEditors.PanelControl();
-            this.separatorControl1 = new DevExpress.XtraEditors.SeparatorControl();
-            this.simpleButton1 = new DevExpress.XtraEditors.SimpleButton();
-            this.btnConfirm = new DevExpress.XtraEditors.SimpleButton();
-            this.btnRefresh2 = new DevExpress.XtraEditors.SimpleButton();
-            this.behaviorManager1 = new DevExpress.Utils.Behaviors.BehaviorManager(this.components);
-            this.simpleButton2 = new DevExpress.XtraEditors.SimpleButton();
-            ((System.ComponentModel.ISupportInitialize)(this.tabFormControl1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.tabFormDefaultManager1)).BeginInit();
-            this.tabFormContentContainer1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.splitContainerControl1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.splitContainerControl1.Panel1)).BeginInit();
-            this.splitContainerControl1.Panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.splitContainerControl1.Panel2)).BeginInit();
-            this.splitContainerControl1.Panel2.SuspendLayout();
-            this.splitContainerControl1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.tlFolder)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pnlSystemHeader)).BeginInit();
+            this.tabControl1 = new System.Windows.Forms.TabControl();
+            this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.splitContainer1 = new System.Windows.Forms.SplitContainer();
+            this.tlvFolder = new BrightIdeasSoftware.TreeListView();
+            this.pnlSystemHeader = new System.Windows.Forms.Panel();
+            this.folderSearchButton = new System.Windows.Forms.Button();
+            this.lblSystemTitle = new System.Windows.Forms.Label();
+            this.tlvData = new BrightIdeasSoftware.TreeListView();
+            this.pnlTopMenu = new System.Windows.Forms.Panel();
+            this.rowAdd = new System.Windows.Forms.Button();
+            this.btnRun = new System.Windows.Forms.Button();
+            this.btnCheckOut = new System.Windows.Forms.Button();
+            this.btnCheckIn = new System.Windows.Forms.Button();
+            this.btnRefresh = new System.Windows.Forms.Button();
+            this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.splitContainer2 = new System.Windows.Forms.SplitContainer();
+            this.tlvFolder2 = new BrightIdeasSoftware.TreeListView();
+            this.pnlSystemHeader2 = new System.Windows.Forms.Panel();
+            this.lblSystemTitle2 = new System.Windows.Forms.Label();
+            this.splitContainer3 = new System.Windows.Forms.SplitContainer();
+            this.tlvLocalFolder = new BrightIdeasSoftware.TreeListView();
+            this.pnlLocalHeader = new System.Windows.Forms.Panel();
+            this.btnLocalFolderSelect = new System.Windows.Forms.Button();
+            this.lblLocalTitle = new System.Windows.Forms.Label();
+            this.newAddGrid = new BrightIdeasSoftware.TreeListView();
+            this.pnlTopMenu2 = new System.Windows.Forms.Panel();
+            this.resetGrid = new System.Windows.Forms.Button();
+            this.btnUpload = new System.Windows.Forms.Button();
+            this.status = new System.Windows.Forms.StatusStrip();
+            this.statusLabel = new System.Windows.Forms.ToolStripStatusLabel();
+            this.tabControl1.SuspendLayout();
+            this.tabPage1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
+            this.splitContainer1.Panel1.SuspendLayout();
+            this.splitContainer1.Panel2.SuspendLayout();
+            this.splitContainer1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.tlvFolder)).BeginInit();
             this.pnlSystemHeader.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.tlData)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pnlTopMenu)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tlvData)).BeginInit();
             this.pnlTopMenu.SuspendLayout();
-            this.tabFormContentContainer2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.splitContainerControl2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.splitContainerControl2.Panel1)).BeginInit();
-            this.splitContainerControl2.Panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.splitContainerControl2.Panel2)).BeginInit();
-            this.splitContainerControl2.Panel2.SuspendLayout();
-            this.splitContainerControl2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.tlFolder2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pnlSystemHeader2)).BeginInit();
+            this.tabPage2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.splitContainer2)).BeginInit();
+            this.splitContainer2.Panel1.SuspendLayout();
+            this.splitContainer2.Panel2.SuspendLayout();
+            this.splitContainer2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.tlvFolder2)).BeginInit();
             this.pnlSystemHeader2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.splitContainer3)).BeginInit();
+            this.splitContainer3.Panel1.SuspendLayout();
+            this.splitContainer3.Panel2.SuspendLayout();
+            this.splitContainer3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.tlvLocalFolder)).BeginInit();
+            this.pnlLocalHeader.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.newAddGrid)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pnlTopMenu2)).BeginInit();
             this.pnlTopMenu2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.separatorControl1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.behaviorManager1)).BeginInit();
+            this.status.SuspendLayout();
             this.SuspendLayout();
             // 
-            // tabFormControl1
+            // tabControl1
             // 
-            this.tabFormControl1.Items.AddRange(new DevExpress.XtraBars.BarItem[] {
-            this.barLabel});
-            this.tabFormControl1.Location = new System.Drawing.Point(0, 0);
-            this.tabFormControl1.Manager = this.tabFormDefaultManager1;
-            this.tabFormControl1.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            this.tabFormControl1.Name = "tabFormControl1";
-            this.tabFormControl1.Pages.Add(this.tabFormPage1);
-            this.tabFormControl1.Pages.Add(this.tabFormPage2);
-            this.tabFormControl1.SelectedPage = this.tabFormPage1;
-            this.tabFormControl1.Size = new System.Drawing.Size(1106, 72);
-            this.tabFormControl1.TabForm = this;
-            this.tabFormControl1.TabIndex = 0;
-            this.tabFormControl1.TabStop = false;
-            this.tabFormControl1.TitleItemLinks.Add(this.barLabel);
-            this.tabFormControl1.OuterFormCreating += new DevExpress.XtraBars.OuterFormCreatingEventHandler(this.OnOuterFormCreating);
+            this.tabControl1.Controls.Add(this.tabPage1);
+            this.tabControl1.Controls.Add(this.tabPage2);
+            this.tabControl1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tabControl1.Location = new System.Drawing.Point(0, 0);
+            this.tabControl1.Name = "tabControl1";
+            this.tabControl1.SelectedIndex = 0;
+            this.tabControl1.Size = new System.Drawing.Size(1293, 691);
+            this.tabControl1.TabIndex = 0;
             // 
-            // barLabel
+            // tabPage1
             // 
-            this.barLabel.Alignment = DevExpress.XtraBars.BarItemLinkAlignment.Left;
-            this.barLabel.Id = 3;
-            this.barLabel.ImageToTextAlignment = DevExpress.XtraBars.BarItemImageToTextAlignment.AfterText;
-            this.barLabel.Name = "barLabel";
+            this.tabPage1.Controls.Add(this.splitContainer1);
+            this.tabPage1.Controls.Add(this.pnlTopMenu);
+            this.tabPage1.Location = new System.Drawing.Point(4, 22);
+            this.tabPage1.Name = "tabPage1";
+            this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage1.Size = new System.Drawing.Size(1285, 665);
+            this.tabPage1.TabIndex = 0;
+            this.tabPage1.Text = "체크인/체크아웃";
+            this.tabPage1.UseVisualStyleBackColor = true;
             // 
-            // tabFormDefaultManager1
+            // splitContainer1
             // 
-            this.tabFormDefaultManager1.DockControls.Add(this.barDockControlTop);
-            this.tabFormDefaultManager1.DockControls.Add(this.barDockControlBottom);
-            this.tabFormDefaultManager1.DockControls.Add(this.barDockControlLeft);
-            this.tabFormDefaultManager1.DockControls.Add(this.barDockControlRight);
-            this.tabFormDefaultManager1.DockingEnabled = false;
-            this.tabFormDefaultManager1.Form = this;
-            this.tabFormDefaultManager1.Items.AddRange(new DevExpress.XtraBars.BarItem[] {
-            this.barLabel});
-            this.tabFormDefaultManager1.MaxItemId = 5;
+            this.splitContainer1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.splitContainer1.FixedPanel = System.Windows.Forms.FixedPanel.Panel1;
+            this.splitContainer1.Location = new System.Drawing.Point(3, 88);
+            this.splitContainer1.Name = "splitContainer1";
             // 
-            // barDockControlTop
+            // splitContainer1.Panel1
             // 
-            this.barDockControlTop.CausesValidation = false;
-            this.barDockControlTop.Dock = System.Windows.Forms.DockStyle.Top;
-            this.barDockControlTop.Location = new System.Drawing.Point(0, 72);
-            this.barDockControlTop.Manager = null;
-            this.barDockControlTop.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            this.barDockControlTop.Size = new System.Drawing.Size(1106, 0);
+            this.splitContainer1.Panel1.Controls.Add(this.tlvFolder);
+            this.splitContainer1.Panel1.Controls.Add(this.pnlSystemHeader);
             // 
-            // barDockControlBottom
+            // splitContainer1.Panel2
             // 
-            this.barDockControlBottom.CausesValidation = false;
-            this.barDockControlBottom.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.barDockControlBottom.Location = new System.Drawing.Point(0, 569);
-            this.barDockControlBottom.Manager = null;
-            this.barDockControlBottom.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            this.barDockControlBottom.Size = new System.Drawing.Size(1106, 0);
+            this.splitContainer1.Panel2.Controls.Add(this.tlvData);
+            this.splitContainer1.Size = new System.Drawing.Size(1279, 574);
+            this.splitContainer1.SplitterDistance = 268;
+            this.splitContainer1.TabIndex = 1;
             // 
-            // barDockControlLeft
+            // tlvFolder
             // 
-            this.barDockControlLeft.CausesValidation = false;
-            this.barDockControlLeft.Dock = System.Windows.Forms.DockStyle.Left;
-            this.barDockControlLeft.Location = new System.Drawing.Point(0, 72);
-            this.barDockControlLeft.Manager = null;
-            this.barDockControlLeft.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            this.barDockControlLeft.Size = new System.Drawing.Size(0, 497);
-            // 
-            // barDockControlRight
-            // 
-            this.barDockControlRight.CausesValidation = false;
-            this.barDockControlRight.Dock = System.Windows.Forms.DockStyle.Right;
-            this.barDockControlRight.Location = new System.Drawing.Point(1106, 72);
-            this.barDockControlRight.Manager = null;
-            this.barDockControlRight.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            this.barDockControlRight.Size = new System.Drawing.Size(0, 497);
-            // 
-            // tabFormPage1
-            // 
-            this.tabFormPage1.ContentContainer = this.tabFormContentContainer1;
-            this.tabFormPage1.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("tabFormPage1.ImageOptions.SvgImage")));
-            this.tabFormPage1.Name = "tabFormPage1";
-            this.tabFormPage1.ShowCloseButton = DevExpress.Utils.DefaultBoolean.False;
-            this.tabFormPage1.Text = "체크인/체크아웃";
-            // 
-            // tabFormContentContainer1
-            // 
-            this.tabFormContentContainer1.Controls.Add(this.splitContainerControl1);
-            this.tabFormContentContainer1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tabFormContentContainer1.Location = new System.Drawing.Point(0, 72);
-            this.tabFormContentContainer1.Name = "tabFormContentContainer1";
-            this.tabFormContentContainer1.Size = new System.Drawing.Size(1106, 497);
-            this.tabFormContentContainer1.TabIndex = 1;
-            // 
-            // splitContainerControl1
-            // 
-            this.splitContainerControl1.Appearance.BackColor = System.Drawing.Color.White;
-            this.splitContainerControl1.Appearance.Options.UseBackColor = true;
-            this.splitContainerControl1.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Default;
-            this.splitContainerControl1.CollapsePanel = DevExpress.XtraEditors.SplitCollapsePanel.Panel1;
-            this.splitContainerControl1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.splitContainerControl1.Location = new System.Drawing.Point(0, 0);
-            this.splitContainerControl1.Margin = new System.Windows.Forms.Padding(0);
-            this.splitContainerControl1.Name = "splitContainerControl1";
-            // 
-            // splitContainerControl1.Panel1
-            // 
-            this.splitContainerControl1.Panel1.Controls.Add(this.tlFolder);
-            this.splitContainerControl1.Panel1.Controls.Add(this.pnlSystemHeader);
-            this.splitContainerControl1.Panel1.Text = "Panel1";
-            // 
-            // splitContainerControl1.Panel2
-            // 
-            this.splitContainerControl1.Panel2.Controls.Add(this.tlData);
-            this.splitContainerControl1.Panel2.Controls.Add(this.pnlTopMenu);
-            this.splitContainerControl1.Panel2.Text = "Panel2";
-            this.splitContainerControl1.ShowSplitGlyph = DevExpress.Utils.DefaultBoolean.True;
-            this.splitContainerControl1.Size = new System.Drawing.Size(1106, 497);
-            this.splitContainerControl1.SplitterPosition = 268;
-            this.splitContainerControl1.TabIndex = 0;
-            // 
-            // tlFolder
-            // 
-            this.tlFolder.Appearance.FocusedRow.BackColor = System.Drawing.Color.DarkSeaGreen;
-            this.tlFolder.Appearance.FocusedRow.Options.UseBackColor = true;
-            this.tlFolder.Appearance.SelectedRow.BackColor = System.Drawing.Color.Gray;
-            this.tlFolder.Appearance.SelectedRow.Options.UseBackColor = true;
-            this.tlFolder.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
-            this.tlFolder.Columns.AddRange(new DevExpress.XtraTreeList.Columns.TreeListColumn[] {
-            this.colFolder});
-            this.tlFolder.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tlFolder.Location = new System.Drawing.Point(0, 35);
-            this.tlFolder.Name = "tlFolder";
-            this.tlFolder.OptionsBehavior.Editable = false;
-            this.tlFolder.OptionsView.ShowColumns = false;
-            this.tlFolder.OptionsView.ShowHorzLines = false;
-            this.tlFolder.OptionsView.ShowIndicator = false;
-            this.tlFolder.OptionsView.ShowVertLines = false;
-            this.tlFolder.Size = new System.Drawing.Size(268, 458);
-            this.tlFolder.TabIndex = 1;
-            // 
-            // colFolder
-            // 
-            this.colFolder.Caption = "분류폴더";
-            this.colFolder.FieldName = "FolderName";
-            this.colFolder.Name = "colFolder";
-            this.colFolder.Visible = true;
-            this.colFolder.VisibleIndex = 0;
+            this.tlvFolder.CellEditUseWholeCell = false;
+            this.tlvFolder.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tlvFolder.HideSelection = false;
+            this.tlvFolder.Location = new System.Drawing.Point(0, 35);
+            this.tlvFolder.Name = "tlvFolder";
+            this.tlvFolder.ShowGroups = false;
+            this.tlvFolder.Size = new System.Drawing.Size(268, 539);
+            this.tlvFolder.TabIndex = 1;
+            this.tlvFolder.UseCompatibleStateImageBehavior = false;
+            this.tlvFolder.View = System.Windows.Forms.View.Details;
+            this.tlvFolder.VirtualMode = true;
+            this.tlvFolder.CellClick += new System.EventHandler<BrightIdeasSoftware.CellClickEventArgs>(this.tlvFolder_CellClick);
+            this.tlvFolder.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.tlvFolder_MouseDoubleClick);
             // 
             // pnlSystemHeader
             // 
-            this.pnlSystemHeader.Appearance.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(43)))), ((int)(((byte)(87)))), ((int)(((byte)(154)))));
-            this.pnlSystemHeader.Appearance.Options.UseBackColor = true;
-            this.pnlSystemHeader.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
-            this.pnlSystemHeader.Controls.Add(this.folderSerachButton);
+            this.pnlSystemHeader.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(43)))), ((int)(((byte)(87)))), ((int)(((byte)(154)))));
+            this.pnlSystemHeader.Controls.Add(this.folderSearchButton);
             this.pnlSystemHeader.Controls.Add(this.lblSystemTitle);
             this.pnlSystemHeader.Dock = System.Windows.Forms.DockStyle.Top;
             this.pnlSystemHeader.Location = new System.Drawing.Point(0, 0);
@@ -262,227 +145,161 @@
             this.pnlSystemHeader.Size = new System.Drawing.Size(268, 35);
             this.pnlSystemHeader.TabIndex = 0;
             // 
-            // folderSerachButton
+            // folderSearchButton
             // 
-            this.folderSerachButton.Dock = System.Windows.Forms.DockStyle.Right;
-            this.folderSerachButton.ImageOptions.Location = DevExpress.XtraEditors.ImageLocation.MiddleCenter;
-            this.folderSerachButton.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("folderSerachButton.ImageOptions.SvgImage")));
-            this.folderSerachButton.ImageOptions.SvgImageSize = new System.Drawing.Size(25, 25);
-            this.folderSerachButton.Location = new System.Drawing.Point(230, 0);
-            this.folderSerachButton.Name = "folderSerachButton";
-            this.folderSerachButton.Size = new System.Drawing.Size(38, 35);
-            this.folderSerachButton.TabIndex = 1;
-            this.folderSerachButton.Click += new System.EventHandler(this.folderSearchButton_Click);
+            this.folderSearchButton.Dock = System.Windows.Forms.DockStyle.Right;
+            this.folderSearchButton.Location = new System.Drawing.Point(205, 0);
+            this.folderSearchButton.Name = "folderSearchButton";
+            this.folderSearchButton.Size = new System.Drawing.Size(63, 35);
+            this.folderSearchButton.TabIndex = 1;
+            this.folderSearchButton.Text = "검색";
+            this.folderSearchButton.UseVisualStyleBackColor = true;
+            this.folderSearchButton.Visible = false;
+            this.folderSearchButton.Click += new System.EventHandler(this.folderSearchButton_Click);
             // 
             // lblSystemTitle
             // 
-            this.lblSystemTitle.Appearance.BackColor = System.Drawing.Color.SeaGreen;
-            this.lblSystemTitle.Appearance.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Bold);
-            this.lblSystemTitle.Appearance.ForeColor = System.Drawing.Color.White;
-            this.lblSystemTitle.Appearance.Options.UseBackColor = true;
-            this.lblSystemTitle.Appearance.Options.UseFont = true;
-            this.lblSystemTitle.Appearance.Options.UseForeColor = true;
-            this.lblSystemTitle.Appearance.Options.UseTextOptions = true;
-            this.lblSystemTitle.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
-            this.lblSystemTitle.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.None;
+            this.lblSystemTitle.BackColor = System.Drawing.Color.SeaGreen;
             this.lblSystemTitle.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.lblSystemTitle.ImageOptions.Alignment = System.Drawing.ContentAlignment.MiddleLeft;
+            this.lblSystemTitle.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Bold);
+            this.lblSystemTitle.ForeColor = System.Drawing.Color.White;
             this.lblSystemTitle.Location = new System.Drawing.Point(0, 0);
             this.lblSystemTitle.Name = "lblSystemTitle";
             this.lblSystemTitle.Size = new System.Drawing.Size(268, 35);
             this.lblSystemTitle.TabIndex = 0;
             this.lblSystemTitle.Text = "시스템 폴더";
+            this.lblSystemTitle.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
-            // tlData
+            // tlvData
             // 
-            this.tlData.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
-            this.tlData.Columns.AddRange(new DevExpress.XtraTreeList.Columns.TreeListColumn[] {
-            this.colName,
-            this.colVersion,
-            this.colGrade});
-            this.tlData.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tlData.Location = new System.Drawing.Point(0, 85);
-            this.tlData.Name = "tlData";
-            this.tlData.Size = new System.Drawing.Size(824, 408);
-            this.tlData.TabIndex = 1;
-            // 
-            // colName
-            // 
-            this.colName.AppearanceHeader.BackColor = System.Drawing.Color.White;
-            this.colName.AppearanceHeader.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold);
-            this.colName.AppearanceHeader.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.colName.AppearanceHeader.Options.UseBackColor = true;
-            this.colName.AppearanceHeader.Options.UseFont = true;
-            this.colName.AppearanceHeader.Options.UseForeColor = true;
-            this.colName.Caption = "자료명";
-            this.colName.FieldName = "Name";
-            this.colName.Name = "colName";
-            this.colName.Visible = true;
-            this.colName.VisibleIndex = 0;
-            this.colName.Width = 300;
-            // 
-            // colVersion
-            // 
-            this.colVersion.AppearanceCell.Options.UseTextOptions = true;
-            this.colVersion.AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
-            this.colVersion.AppearanceHeader.BackColor = System.Drawing.Color.White;
-            this.colVersion.AppearanceHeader.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold);
-            this.colVersion.AppearanceHeader.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.colVersion.AppearanceHeader.Options.UseBackColor = true;
-            this.colVersion.AppearanceHeader.Options.UseFont = true;
-            this.colVersion.AppearanceHeader.Options.UseForeColor = true;
-            this.colVersion.Caption = "버전";
-            this.colVersion.FieldName = "Version";
-            this.colVersion.Name = "colVersion";
-            this.colVersion.Visible = true;
-            this.colVersion.VisibleIndex = 1;
-            this.colVersion.Width = 80;
-            // 
-            // colGrade
-            // 
-            this.colGrade.AppearanceCell.Options.UseTextOptions = true;
-            this.colGrade.AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
-            this.colGrade.AppearanceHeader.BackColor = System.Drawing.Color.White;
-            this.colGrade.AppearanceHeader.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold);
-            this.colGrade.AppearanceHeader.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.colGrade.AppearanceHeader.Options.UseBackColor = true;
-            this.colGrade.AppearanceHeader.Options.UseFont = true;
-            this.colGrade.AppearanceHeader.Options.UseForeColor = true;
-            this.colGrade.Caption = "등급";
-            this.colGrade.FieldName = "Grade";
-            this.colGrade.Name = "colGrade";
-            this.colGrade.Visible = true;
-            this.colGrade.VisibleIndex = 2;
-            this.colGrade.Width = 80;
+            this.tlvData.CellEditUseWholeCell = false;
+            this.tlvData.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tlvData.FullRowSelect = true;
+            this.tlvData.GridLines = true;
+            this.tlvData.HideSelection = false;
+            this.tlvData.Location = new System.Drawing.Point(0, 0);
+            this.tlvData.MultiSelect = false;
+            this.tlvData.Name = "tlvData";
+            this.tlvData.RowHeight = 25;
+            this.tlvData.ShowGroups = false;
+            this.tlvData.Size = new System.Drawing.Size(1007, 574);
+            this.tlvData.TabIndex = 0;
+            this.tlvData.UseCompatibleStateImageBehavior = false;
+            this.tlvData.View = System.Windows.Forms.View.Details;
+            this.tlvData.VirtualMode = true;
             // 
             // pnlTopMenu
             // 
+            this.pnlTopMenu.Controls.Add(this.rowAdd);
             this.pnlTopMenu.Controls.Add(this.btnRun);
-            this.pnlTopMenu.Controls.Add(this.simpleButton2);
+            this.pnlTopMenu.Controls.Add(this.btnCheckOut);
             this.pnlTopMenu.Controls.Add(this.btnCheckIn);
             this.pnlTopMenu.Controls.Add(this.btnRefresh);
             this.pnlTopMenu.Dock = System.Windows.Forms.DockStyle.Top;
-            this.pnlTopMenu.Location = new System.Drawing.Point(0, 0);
+            this.pnlTopMenu.Location = new System.Drawing.Point(3, 3);
             this.pnlTopMenu.Name = "pnlTopMenu";
-            this.pnlTopMenu.Size = new System.Drawing.Size(824, 85);
+            this.pnlTopMenu.Size = new System.Drawing.Size(1279, 85);
             this.pnlTopMenu.TabIndex = 0;
+            // 
+            // rowAdd
+            // 
+            this.rowAdd.Location = new System.Drawing.Point(575, 4);
+            this.rowAdd.Name = "rowAdd";
+            this.rowAdd.Size = new System.Drawing.Size(70, 75);
+            this.rowAdd.TabIndex = 2;
+            this.rowAdd.Text = "추가 파일 등록";
+            this.rowAdd.UseVisualStyleBackColor = true;
+            this.rowAdd.Click += new System.EventHandler(this.rowAdd_Click);
             // 
             // btnRun
             // 
-            this.btnRun.ImageOptions.ImageToTextAlignment = DevExpress.XtraEditors.ImageAlignToText.TopCenter;
-            this.btnRun.ImageOptions.Location = DevExpress.XtraEditors.ImageLocation.TopCenter;
-            this.btnRun.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("btnRun.ImageOptions.SvgImage")));
-            this.btnRun.Location = new System.Drawing.Point(229, 4);
+            this.btnRun.Location = new System.Drawing.Point(499, 4);
             this.btnRun.Name = "btnRun";
-            this.btnRun.PaintStyle = DevExpress.XtraEditors.Controls.PaintStyles.Light;
             this.btnRun.Size = new System.Drawing.Size(70, 75);
-            this.btnRun.TabIndex = 4;
+            this.btnRun.TabIndex = 2;
             this.btnRun.Text = "프로그램\r\n실행";
+            this.btnRun.UseVisualStyleBackColor = true;
             this.btnRun.Click += new System.EventHandler(this.btnRun_Click);
+            // 
+            // btnCheckOut
+            // 
+            this.btnCheckOut.Location = new System.Drawing.Point(423, 4);
+            this.btnCheckOut.Name = "btnCheckOut";
+            this.btnCheckOut.Size = new System.Drawing.Size(70, 75);
+            this.btnCheckOut.TabIndex = 1;
+            this.btnCheckOut.Text = "체크아웃";
+            this.btnCheckOut.UseVisualStyleBackColor = true;
+            this.btnCheckOut.Click += new System.EventHandler(this.btnCheckOut_Click);
             // 
             // btnCheckIn
             // 
-            this.btnCheckIn.ImageOptions.ImageToTextAlignment = DevExpress.XtraEditors.ImageAlignToText.TopCenter;
-            this.btnCheckIn.ImageOptions.Location = DevExpress.XtraEditors.ImageLocation.TopCenter;
-            this.btnCheckIn.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("btnCheckIn.ImageOptions.SvgImage")));
-            this.btnCheckIn.Location = new System.Drawing.Point(80, 4);
+            this.btnCheckIn.Location = new System.Drawing.Point(349, 4);
             this.btnCheckIn.Name = "btnCheckIn";
-            this.btnCheckIn.PaintStyle = DevExpress.XtraEditors.Controls.PaintStyles.Light;
             this.btnCheckIn.Size = new System.Drawing.Size(70, 75);
-            this.btnCheckIn.TabIndex = 3;
+            this.btnCheckIn.TabIndex = 1;
             this.btnCheckIn.Text = "체크인";
+            this.btnCheckIn.UseVisualStyleBackColor = true;
+            this.btnCheckIn.Click += new System.EventHandler(this.btnCheckIn_Click);
             // 
             // btnRefresh
             // 
-            this.btnRefresh.Appearance.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnRefresh.Appearance.Options.UseFont = true;
-            this.btnRefresh.ImageOptions.ImageToTextAlignment = DevExpress.XtraEditors.ImageAlignToText.TopCenter;
-            this.btnRefresh.ImageOptions.Location = DevExpress.XtraEditors.ImageLocation.TopCenter;
-            this.btnRefresh.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("btnRefresh.ImageOptions.SvgImage")));
-            this.btnRefresh.Location = new System.Drawing.Point(4, 4);
+            this.btnRefresh.Location = new System.Drawing.Point(273, 4);
             this.btnRefresh.Name = "btnRefresh";
-            this.btnRefresh.PaintStyle = DevExpress.XtraEditors.Controls.PaintStyles.Light;
             this.btnRefresh.Size = new System.Drawing.Size(70, 75);
-            this.btnRefresh.TabIndex = 2;
+            this.btnRefresh.TabIndex = 0;
             this.btnRefresh.Text = "새로\r\n고침";
+            this.btnRefresh.UseVisualStyleBackColor = true;
+            this.btnRefresh.Click += new System.EventHandler(this.btnRefresh_Click);
             // 
-            // tabFormPage2
+            // tabPage2
             // 
-            this.tabFormPage2.ContentContainer = this.tabFormContentContainer2;
-            this.tabFormPage2.Name = "tabFormPage2";
-            this.tabFormPage2.ShowCloseButton = DevExpress.Utils.DefaultBoolean.False;
-            this.tabFormPage2.Text = "신규등록";
+            this.tabPage2.Controls.Add(this.splitContainer2);
+            this.tabPage2.Controls.Add(this.pnlTopMenu2);
+            this.tabPage2.Location = new System.Drawing.Point(4, 22);
+            this.tabPage2.Name = "tabPage2";
+            this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage2.Size = new System.Drawing.Size(1285, 665);
+            this.tabPage2.TabIndex = 1;
+            this.tabPage2.Text = "신규등록";
+            this.tabPage2.UseVisualStyleBackColor = true;
             // 
-            // tabFormContentContainer2
+            // splitContainer2
             // 
-            this.tabFormContentContainer2.Controls.Add(this.splitContainerControl2);
-            this.tabFormContentContainer2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tabFormContentContainer2.Location = new System.Drawing.Point(0, 72);
-            this.tabFormContentContainer2.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            this.tabFormContentContainer2.Name = "tabFormContentContainer2";
-            this.tabFormContentContainer2.Size = new System.Drawing.Size(1106, 497);
-            this.tabFormContentContainer2.TabIndex = 4;
+            this.splitContainer2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.splitContainer2.FixedPanel = System.Windows.Forms.FixedPanel.Panel1;
+            this.splitContainer2.Location = new System.Drawing.Point(3, 88);
+            this.splitContainer2.Name = "splitContainer2";
             // 
-            // splitContainerControl2
+            // splitContainer2.Panel1
             // 
-            this.splitContainerControl2.Appearance.BackColor = System.Drawing.Color.White;
-            this.splitContainerControl2.Appearance.Options.UseBackColor = true;
-            this.splitContainerControl2.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Default;
-            this.splitContainerControl2.CollapsePanel = DevExpress.XtraEditors.SplitCollapsePanel.Panel1;
-            this.splitContainerControl2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.splitContainerControl2.Location = new System.Drawing.Point(0, 0);
-            this.splitContainerControl2.Margin = new System.Windows.Forms.Padding(0);
-            this.splitContainerControl2.Name = "splitContainerControl2";
+            this.splitContainer2.Panel1.Controls.Add(this.tlvFolder2);
+            this.splitContainer2.Panel1.Controls.Add(this.pnlSystemHeader2);
             // 
-            // splitContainerControl2.Panel1
+            // splitContainer2.Panel2
             // 
-            this.splitContainerControl2.Panel1.Controls.Add(this.tlFolder2);
-            this.splitContainerControl2.Panel1.Controls.Add(this.pnlSystemHeader2);
-            this.splitContainerControl2.Panel1.Text = "Panel1";
+            this.splitContainer2.Panel2.Controls.Add(this.splitContainer3);
+            this.splitContainer2.Size = new System.Drawing.Size(1279, 574);
+            this.splitContainer2.SplitterDistance = 268;
+            this.splitContainer2.TabIndex = 1;
             // 
-            // splitContainerControl2.Panel2
+            // tlvFolder2
             // 
-            this.splitContainerControl2.Panel2.Controls.Add(this.newAddGrid);
-            this.splitContainerControl2.Panel2.Controls.Add(this.pnlTopMenu2);
-            this.splitContainerControl2.Panel2.Text = "Panel2";
-            this.splitContainerControl2.ShowSplitGlyph = DevExpress.Utils.DefaultBoolean.True;
-            this.splitContainerControl2.Size = new System.Drawing.Size(1106, 497);
-            this.splitContainerControl2.SplitterPosition = 268;
-            this.splitContainerControl2.TabIndex = 0;
-            // 
-            // tlFolder2
-            // 
-            this.tlFolder2.Appearance.FocusedRow.BackColor = System.Drawing.Color.DarkSeaGreen;
-            this.tlFolder2.Appearance.FocusedRow.Options.UseBackColor = true;
-            this.tlFolder2.Appearance.SelectedRow.BackColor = System.Drawing.Color.Gray;
-            this.tlFolder2.Appearance.SelectedRow.Options.UseBackColor = true;
-            this.tlFolder2.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
-            this.tlFolder2.Columns.AddRange(new DevExpress.XtraTreeList.Columns.TreeListColumn[] {
-            this.colFolder2});
-            this.tlFolder2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tlFolder2.Location = new System.Drawing.Point(0, 35);
-            this.tlFolder2.Name = "tlFolder2";
-            this.tlFolder2.OptionsBehavior.Editable = false;
-            this.tlFolder2.OptionsView.ShowColumns = false;
-            this.tlFolder2.OptionsView.ShowHorzLines = false;
-            this.tlFolder2.OptionsView.ShowIndicator = false;
-            this.tlFolder2.OptionsView.ShowVertLines = false;
-            this.tlFolder2.Size = new System.Drawing.Size(268, 458);
-            this.tlFolder2.TabIndex = 1;
-            // 
-            // colFolder2
-            // 
-            this.colFolder2.Caption = "분류폴더";
-            this.colFolder2.FieldName = "FolderName";
-            this.colFolder2.Name = "colFolder2";
-            this.colFolder2.Visible = true;
-            this.colFolder2.VisibleIndex = 0;
+            this.tlvFolder2.CellEditUseWholeCell = false;
+            this.tlvFolder2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tlvFolder2.HideSelection = false;
+            this.tlvFolder2.Location = new System.Drawing.Point(0, 35);
+            this.tlvFolder2.Name = "tlvFolder2";
+            this.tlvFolder2.ShowGroups = false;
+            this.tlvFolder2.Size = new System.Drawing.Size(268, 539);
+            this.tlvFolder2.TabIndex = 1;
+            this.tlvFolder2.UseCompatibleStateImageBehavior = false;
+            this.tlvFolder2.View = System.Windows.Forms.View.Details;
+            this.tlvFolder2.VirtualMode = true;
+            this.tlvFolder2.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.tlvFolder2_MouseDoubleClick);
             // 
             // pnlSystemHeader2
             // 
-            this.pnlSystemHeader2.Appearance.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(43)))), ((int)(((byte)(87)))), ((int)(((byte)(154)))));
-            this.pnlSystemHeader2.Appearance.Options.UseBackColor = true;
-            this.pnlSystemHeader2.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
+            this.pnlSystemHeader2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(43)))), ((int)(((byte)(87)))), ((int)(((byte)(154)))));
             this.pnlSystemHeader2.Controls.Add(this.lblSystemTitle2);
             this.pnlSystemHeader2.Dock = System.Windows.Forms.DockStyle.Top;
             this.pnlSystemHeader2.Location = new System.Drawing.Point(0, 0);
@@ -492,206 +309,192 @@
             // 
             // lblSystemTitle2
             // 
-            this.lblSystemTitle2.Appearance.BackColor = System.Drawing.Color.DarkRed;
-            this.lblSystemTitle2.Appearance.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Bold);
-            this.lblSystemTitle2.Appearance.ForeColor = System.Drawing.Color.White;
-            this.lblSystemTitle2.Appearance.Options.UseBackColor = true;
-            this.lblSystemTitle2.Appearance.Options.UseFont = true;
-            this.lblSystemTitle2.Appearance.Options.UseForeColor = true;
-            this.lblSystemTitle2.Appearance.Options.UseTextOptions = true;
-            this.lblSystemTitle2.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
-            this.lblSystemTitle2.AutoSizeMode = DevExpress.XtraEditors.LabelAutoSizeMode.None;
+            this.lblSystemTitle2.BackColor = System.Drawing.Color.DarkRed;
             this.lblSystemTitle2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.lblSystemTitle2.ImageOptions.Alignment = System.Drawing.ContentAlignment.MiddleLeft;
+            this.lblSystemTitle2.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Bold);
+            this.lblSystemTitle2.ForeColor = System.Drawing.Color.White;
             this.lblSystemTitle2.Location = new System.Drawing.Point(0, 0);
             this.lblSystemTitle2.Name = "lblSystemTitle2";
             this.lblSystemTitle2.Size = new System.Drawing.Size(268, 35);
             this.lblSystemTitle2.TabIndex = 0;
-            this.lblSystemTitle2.Text = "신규등록";
+            this.lblSystemTitle2.Text = "시스템 신규등록";
+            this.lblSystemTitle2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // splitContainer3
+            // 
+            this.splitContainer3.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.splitContainer3.Location = new System.Drawing.Point(0, 0);
+            this.splitContainer3.Name = "splitContainer3";
+            // 
+            // splitContainer3.Panel1
+            // 
+            this.splitContainer3.Panel1.Controls.Add(this.tlvLocalFolder);
+            this.splitContainer3.Panel1.Controls.Add(this.pnlLocalHeader);
+            // 
+            // splitContainer3.Panel2
+            // 
+            this.splitContainer3.Panel2.Controls.Add(this.newAddGrid);
+            this.splitContainer3.Size = new System.Drawing.Size(1007, 574);
+            this.splitContainer3.SplitterDistance = 330;
+            this.splitContainer3.TabIndex = 0;
+            // 
+            // tlvLocalFolder
+            // 
+            this.tlvLocalFolder.CellEditUseWholeCell = false;
+            this.tlvLocalFolder.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tlvLocalFolder.HideSelection = false;
+            this.tlvLocalFolder.Location = new System.Drawing.Point(0, 35);
+            this.tlvLocalFolder.Name = "tlvLocalFolder";
+            this.tlvLocalFolder.ShowGroups = false;
+            this.tlvLocalFolder.Size = new System.Drawing.Size(330, 539);
+            this.tlvLocalFolder.TabIndex = 1;
+            this.tlvLocalFolder.UseCompatibleStateImageBehavior = false;
+            this.tlvLocalFolder.View = System.Windows.Forms.View.Details;
+            this.tlvLocalFolder.VirtualMode = true;
+            // 
+            // pnlLocalHeader
+            // 
+            this.pnlLocalHeader.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(43)))), ((int)(((byte)(87)))), ((int)(((byte)(154)))));
+            this.pnlLocalHeader.Controls.Add(this.btnLocalFolderSelect);
+            this.pnlLocalHeader.Controls.Add(this.lblLocalTitle);
+            this.pnlLocalHeader.Dock = System.Windows.Forms.DockStyle.Top;
+            this.pnlLocalHeader.Location = new System.Drawing.Point(0, 0);
+            this.pnlLocalHeader.Name = "pnlLocalHeader";
+            this.pnlLocalHeader.Size = new System.Drawing.Size(330, 35);
+            this.pnlLocalHeader.TabIndex = 0;
+            // 
+            // btnLocalFolderSelect
+            // 
+            this.btnLocalFolderSelect.Dock = System.Windows.Forms.DockStyle.Right;
+            this.btnLocalFolderSelect.Location = new System.Drawing.Point(264, 0);
+            this.btnLocalFolderSelect.Name = "btnLocalFolderSelect";
+            this.btnLocalFolderSelect.Size = new System.Drawing.Size(66, 35);
+            this.btnLocalFolderSelect.TabIndex = 1;
+            this.btnLocalFolderSelect.Text = "선택";
+            this.btnLocalFolderSelect.UseVisualStyleBackColor = true;
+            // 
+            // lblLocalTitle
+            // 
+            this.lblLocalTitle.BackColor = System.Drawing.Color.Chocolate;
+            this.lblLocalTitle.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.lblLocalTitle.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Bold);
+            this.lblLocalTitle.ForeColor = System.Drawing.Color.White;
+            this.lblLocalTitle.Location = new System.Drawing.Point(0, 0);
+            this.lblLocalTitle.Name = "lblLocalTitle";
+            this.lblLocalTitle.Size = new System.Drawing.Size(330, 35);
+            this.lblLocalTitle.TabIndex = 0;
+            this.lblLocalTitle.Text = "로컬 폴더";
+            this.lblLocalTitle.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // newAddGrid
             // 
             this.newAddGrid.AllowDrop = true;
-            this.newAddGrid.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
-            this.newAddGrid.Columns.AddRange(new DevExpress.XtraTreeList.Columns.TreeListColumn[] {
-            this.newAddObjNm,
-            this.newAddVersion,
-            this.newAddObjState});
+            this.newAddGrid.CellEditActivation = BrightIdeasSoftware.ObjectListView.CellEditActivateMode.DoubleClick;
+            this.newAddGrid.CellEditTabChangesRows = true;
+            this.newAddGrid.CellEditUseWholeCell = false;
             this.newAddGrid.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.newAddGrid.Location = new System.Drawing.Point(0, 85);
+            this.newAddGrid.FullRowSelect = true;
+            this.newAddGrid.GridLines = true;
+            this.newAddGrid.HideSelection = false;
+            this.newAddGrid.Location = new System.Drawing.Point(0, 0);
             this.newAddGrid.Name = "newAddGrid";
-            this.newAddGrid.Size = new System.Drawing.Size(824, 408);
-            this.newAddGrid.TabIndex = 1;
+            this.newAddGrid.RowHeight = 25;
+            this.newAddGrid.ShowGroups = false;
+            this.newAddGrid.Size = new System.Drawing.Size(673, 574);
+            this.newAddGrid.TabIndex = 0;
+            this.newAddGrid.UseCompatibleStateImageBehavior = false;
+            this.newAddGrid.View = System.Windows.Forms.View.Details;
+            this.newAddGrid.VirtualMode = true;
             this.newAddGrid.DragDrop += new System.Windows.Forms.DragEventHandler(this.newAddGrid_DragDrop);
             this.newAddGrid.DragEnter += new System.Windows.Forms.DragEventHandler(this.newAddGrid_DragEnter);
             // 
-            // newAddObjNm
-            // 
-            this.newAddObjNm.AppearanceHeader.BackColor = System.Drawing.Color.White;
-            this.newAddObjNm.AppearanceHeader.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold);
-            this.newAddObjNm.AppearanceHeader.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.newAddObjNm.AppearanceHeader.Options.UseBackColor = true;
-            this.newAddObjNm.AppearanceHeader.Options.UseFont = true;
-            this.newAddObjNm.AppearanceHeader.Options.UseForeColor = true;
-            this.newAddObjNm.Caption = "자료명";
-            this.newAddObjNm.FieldName = "Name";
-            this.newAddObjNm.Name = "newAddObjNm";
-            this.newAddObjNm.Visible = true;
-            this.newAddObjNm.VisibleIndex = 0;
-            this.newAddObjNm.Width = 406;
-            // 
-            // newAddVersion
-            // 
-            this.newAddVersion.AppearanceCell.Options.UseTextOptions = true;
-            this.newAddVersion.AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
-            this.newAddVersion.AppearanceHeader.BackColor = System.Drawing.Color.White;
-            this.newAddVersion.AppearanceHeader.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold);
-            this.newAddVersion.AppearanceHeader.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.newAddVersion.AppearanceHeader.Options.UseBackColor = true;
-            this.newAddVersion.AppearanceHeader.Options.UseFont = true;
-            this.newAddVersion.AppearanceHeader.Options.UseForeColor = true;
-            this.newAddVersion.Caption = "버전";
-            this.newAddVersion.FieldName = "Version";
-            this.newAddVersion.Name = "newAddVersion";
-            this.newAddVersion.Visible = true;
-            this.newAddVersion.VisibleIndex = 1;
-            this.newAddVersion.Width = 198;
-            // 
-            // newAddObjState
-            // 
-            this.newAddObjState.AppearanceCell.Options.UseTextOptions = true;
-            this.newAddObjState.AppearanceCell.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
-            this.newAddObjState.AppearanceHeader.BackColor = System.Drawing.Color.White;
-            this.newAddObjState.AppearanceHeader.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold);
-            this.newAddObjState.AppearanceHeader.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.newAddObjState.AppearanceHeader.Options.UseBackColor = true;
-            this.newAddObjState.AppearanceHeader.Options.UseFont = true;
-            this.newAddObjState.AppearanceHeader.Options.UseForeColor = true;
-            this.newAddObjState.Caption = "등급";
-            this.newAddObjState.FieldName = "Grade";
-            this.newAddObjState.Name = "newAddObjState";
-            this.newAddObjState.Visible = true;
-            this.newAddObjState.VisibleIndex = 2;
-            this.newAddObjState.Width = 197;
-            // 
             // pnlTopMenu2
             // 
-            this.pnlTopMenu2.Controls.Add(this.separatorControl1);
-            this.pnlTopMenu2.Controls.Add(this.simpleButton1);
-            this.pnlTopMenu2.Controls.Add(this.btnConfirm);
-            this.pnlTopMenu2.Controls.Add(this.btnRefresh2);
+            this.pnlTopMenu2.Controls.Add(this.resetGrid);
+            this.pnlTopMenu2.Controls.Add(this.btnUpload);
             this.pnlTopMenu2.Dock = System.Windows.Forms.DockStyle.Top;
-            this.pnlTopMenu2.Location = new System.Drawing.Point(0, 0);
+            this.pnlTopMenu2.Location = new System.Drawing.Point(3, 3);
             this.pnlTopMenu2.Name = "pnlTopMenu2";
-            this.pnlTopMenu2.Size = new System.Drawing.Size(824, 85);
+            this.pnlTopMenu2.Size = new System.Drawing.Size(1279, 85);
             this.pnlTopMenu2.TabIndex = 0;
             // 
-            // separatorControl1
+            // resetGrid
             // 
-            this.separatorControl1.LineOrientation = System.Windows.Forms.Orientation.Vertical;
-            this.separatorControl1.Location = new System.Drawing.Point(156, 2);
-            this.separatorControl1.Name = "separatorControl1";
-            this.separatorControl1.Size = new System.Drawing.Size(20, 82);
-            this.separatorControl1.TabIndex = 4;
+            this.resetGrid.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.resetGrid.Location = new System.Drawing.Point(1042, 4);
+            this.resetGrid.Name = "resetGrid";
+            this.resetGrid.Size = new System.Drawing.Size(112, 75);
+            this.resetGrid.TabIndex = 2;
+            this.resetGrid.Text = "초기화";
+            this.resetGrid.UseVisualStyleBackColor = true;
+            this.resetGrid.Click += new System.EventHandler(this.resetGrid_Click);
             // 
-            // simpleButton1
+            // btnUpload
             // 
-            this.simpleButton1.ImageOptions.ImageToTextAlignment = DevExpress.XtraEditors.ImageAlignToText.TopCenter;
-            this.simpleButton1.ImageOptions.Location = DevExpress.XtraEditors.ImageLocation.TopCenter;
-            this.simpleButton1.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("simpleButton1.ImageOptions.SvgImage")));
-            this.simpleButton1.Location = new System.Drawing.Point(182, 5);
-            this.simpleButton1.Name = "simpleButton1";
-            this.simpleButton1.PaintStyle = DevExpress.XtraEditors.Controls.PaintStyles.Light;
-            this.simpleButton1.Size = new System.Drawing.Size(70, 75);
-            this.simpleButton1.TabIndex = 4;
-            this.simpleButton1.Text = "업로드확정";
+            this.btnUpload.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnUpload.Location = new System.Drawing.Point(1159, 4);
+            this.btnUpload.Name = "btnUpload";
+            this.btnUpload.Size = new System.Drawing.Size(112, 75);
+            this.btnUpload.TabIndex = 2;
+            this.btnUpload.Text = "업로드\r\n확정";
+            this.btnUpload.UseVisualStyleBackColor = true;
+            this.btnUpload.Click += new System.EventHandler(this.btnUpload_Click);
             // 
-            // btnConfirm
+            // status
             // 
-            this.btnConfirm.ImageOptions.ImageToTextAlignment = DevExpress.XtraEditors.ImageAlignToText.TopCenter;
-            this.btnConfirm.ImageOptions.Location = DevExpress.XtraEditors.ImageLocation.TopCenter;
-            this.btnConfirm.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("btnConfirm.ImageOptions.SvgImage")));
-            this.btnConfirm.Location = new System.Drawing.Point(80, 4);
-            this.btnConfirm.Name = "btnConfirm";
-            this.btnConfirm.PaintStyle = DevExpress.XtraEditors.Controls.PaintStyles.Light;
-            this.btnConfirm.Size = new System.Drawing.Size(70, 75);
-            this.btnConfirm.TabIndex = 3;
-            this.btnConfirm.Text = "폴더열기";
-            this.btnConfirm.Click += new System.EventHandler(this.btnConfirm_Click);
+            this.status.ImageScalingSize = new System.Drawing.Size(24, 24);
+            this.status.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.statusLabel});
+            this.status.Location = new System.Drawing.Point(0, 669);
+            this.status.Name = "status";
+            this.status.Size = new System.Drawing.Size(1293, 22);
+            this.status.TabIndex = 1;
+            this.status.Text = "statusStrip1";
             // 
-            // btnRefresh2
+            // statusLabel
             // 
-            this.btnRefresh2.Appearance.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnRefresh2.Appearance.Options.UseFont = true;
-            this.btnRefresh2.ImageOptions.ImageToTextAlignment = DevExpress.XtraEditors.ImageAlignToText.TopCenter;
-            this.btnRefresh2.ImageOptions.Location = DevExpress.XtraEditors.ImageLocation.TopCenter;
-            this.btnRefresh2.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("btnRefresh2.ImageOptions.SvgImage")));
-            this.btnRefresh2.Location = new System.Drawing.Point(4, 4);
-            this.btnRefresh2.Name = "btnRefresh2";
-            this.btnRefresh2.PaintStyle = DevExpress.XtraEditors.Controls.PaintStyles.Light;
-            this.btnRefresh2.Size = new System.Drawing.Size(70, 75);
-            this.btnRefresh2.TabIndex = 2;
-            this.btnRefresh2.Text = "새로\r\n고침";
-            // 
-            // simpleButton2
-            // 
-            this.simpleButton2.ImageOptions.ImageToTextAlignment = DevExpress.XtraEditors.ImageAlignToText.TopCenter;
-            this.simpleButton2.ImageOptions.Location = DevExpress.XtraEditors.ImageLocation.TopCenter;
-            this.simpleButton2.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("simpleButton2.ImageOptions.SvgImage")));
-            this.simpleButton2.Location = new System.Drawing.Point(153, 4);
-            this.simpleButton2.Name = "simpleButton2";
-            this.simpleButton2.PaintStyle = DevExpress.XtraEditors.Controls.PaintStyles.Light;
-            this.simpleButton2.Size = new System.Drawing.Size(70, 75);
-            this.simpleButton2.TabIndex = 3;
-            this.simpleButton2.Text = "체크인";
+            this.statusLabel.Name = "statusLabel";
+            this.statusLabel.Size = new System.Drawing.Size(121, 17);
+            this.statusLabel.Text = "toolStripStatusLabel1";
             // 
             // Main
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 14F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1106, 569);
-            this.Controls.Add(this.barDockControlLeft);
-            this.Controls.Add(this.barDockControlRight);
-            this.Controls.Add(this.barDockControlBottom);
-            this.Controls.Add(this.barDockControlTop);
-            this.Controls.Add(this.tabFormContentContainer1);
-            this.Controls.Add(this.tabFormControl1);
-            this.IconOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("Main.IconOptions.SvgImage")));
-            this.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.ClientSize = new System.Drawing.Size(1293, 691);
+            this.Controls.Add(this.status);
+            this.Controls.Add(this.tabControl1);
             this.Name = "Main";
-            this.TabFormControl = this.tabFormControl1;
             this.Text = "TP_Connector";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Activated += new System.EventHandler(this.Main_Activated);
-            ((System.ComponentModel.ISupportInitialize)(this.tabFormControl1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.tabFormDefaultManager1)).EndInit();
-            this.tabFormContentContainer1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.splitContainerControl1.Panel1)).EndInit();
-            this.splitContainerControl1.Panel1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.splitContainerControl1.Panel2)).EndInit();
-            this.splitContainerControl1.Panel2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.splitContainerControl1)).EndInit();
-            this.splitContainerControl1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.tlFolder)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pnlSystemHeader)).EndInit();
+            this.tabControl1.ResumeLayout(false);
+            this.tabPage1.ResumeLayout(false);
+            this.splitContainer1.Panel1.ResumeLayout(false);
+            this.splitContainer1.Panel2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).EndInit();
+            this.splitContainer1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.tlvFolder)).EndInit();
             this.pnlSystemHeader.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.tlData)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pnlTopMenu)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tlvData)).EndInit();
             this.pnlTopMenu.ResumeLayout(false);
-            this.tabFormContentContainer2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.splitContainerControl2.Panel1)).EndInit();
-            this.splitContainerControl2.Panel1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.splitContainerControl2.Panel2)).EndInit();
-            this.splitContainerControl2.Panel2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.splitContainerControl2)).EndInit();
-            this.splitContainerControl2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.tlFolder2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pnlSystemHeader2)).EndInit();
+            this.tabPage2.ResumeLayout(false);
+            this.splitContainer2.Panel1.ResumeLayout(false);
+            this.splitContainer2.Panel2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.splitContainer2)).EndInit();
+            this.splitContainer2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.tlvFolder2)).EndInit();
             this.pnlSystemHeader2.ResumeLayout(false);
+            this.splitContainer3.Panel1.ResumeLayout(false);
+            this.splitContainer3.Panel2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.splitContainer3)).EndInit();
+            this.splitContainer3.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.tlvLocalFolder)).EndInit();
+            this.pnlLocalHeader.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.newAddGrid)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pnlTopMenu2)).EndInit();
             this.pnlTopMenu2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.separatorControl1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.behaviorManager1)).EndInit();
+            this.status.ResumeLayout(false);
+            this.status.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -699,50 +502,43 @@
 
         #endregion
 
-        private DevExpress.XtraBars.TabFormControl tabFormControl1;
-        private DevExpress.XtraBars.TabFormDefaultManager tabFormDefaultManager1;
-        private DevExpress.XtraBars.BarDockControl barDockControlTop;
-        private DevExpress.XtraBars.BarDockControl barDockControlBottom;
-        private DevExpress.XtraBars.BarDockControl barDockControlLeft;
-        private DevExpress.XtraBars.BarDockControl barDockControlRight;
-        private DevExpress.XtraBars.TabFormContentContainer tabFormContentContainer1;
-        private DevExpress.XtraBars.TabFormPage tabFormPage1;
-        private DevExpress.XtraBars.TabFormContentContainer tabFormContentContainer2;
-        private DevExpress.XtraBars.TabFormPage tabFormPage2;
+        private System.Windows.Forms.TabControl tabControl1;
+        private System.Windows.Forms.TabPage tabPage1;
+        private System.Windows.Forms.TabPage tabPage2;
+        private System.Windows.Forms.SplitContainer splitContainer1;
+        private System.Windows.Forms.Panel pnlSystemHeader;
+        private System.Windows.Forms.Button folderSearchButton;
+        private System.Windows.Forms.Label lblSystemTitle;
 
-        // 새로 정의된 컨트롤 (탭 1)
-        private DevExpress.XtraEditors.SplitContainerControl splitContainerControl1;
-        private DevExpress.XtraEditors.PanelControl pnlSystemHeader;
-        private DevExpress.XtraEditors.LabelControl lblSystemTitle;
-        private DevExpress.XtraEditors.PanelControl pnlTopMenu;
-        private DevExpress.XtraEditors.SimpleButton btnRefresh;
-        private DevExpress.XtraEditors.SimpleButton btnCheckIn;
-        private DevExpress.XtraEditors.SimpleButton btnRun;
-        private DevExpress.XtraTreeList.TreeList tlData;
-        private DevExpress.XtraTreeList.Columns.TreeListColumn colName;
-        private DevExpress.XtraTreeList.Columns.TreeListColumn colVersion;
-        private DevExpress.XtraTreeList.Columns.TreeListColumn colGrade;
-        private DevExpress.XtraTreeList.TreeList tlFolder;
-        private DevExpress.XtraTreeList.Columns.TreeListColumn colFolder;
-        private DevExpress.XtraBars.BarStaticItem barLabel;
-        private DevExpress.XtraEditors.SimpleButton folderSerachButton;
+        // ★★★ 이 부분(ObjectListView 선언)이 있는지 꼭 확인해주세요! ★★★
+        private BrightIdeasSoftware.TreeListView tlvFolder;
+        private BrightIdeasSoftware.TreeListView tlvData;
 
-        // 신규등록 탭 (탭 2) 추가 컨트롤
-        private DevExpress.XtraEditors.SplitContainerControl splitContainerControl2;
-        private DevExpress.XtraEditors.PanelControl pnlSystemHeader2;
-        private DevExpress.XtraEditors.LabelControl lblSystemTitle2;
-        private DevExpress.XtraEditors.PanelControl pnlTopMenu2;
-        private DevExpress.XtraEditors.SimpleButton btnRefresh2;
-        private DevExpress.XtraEditors.SimpleButton btnConfirm;
-        private DevExpress.XtraTreeList.TreeList newAddGrid;
-        private DevExpress.XtraTreeList.Columns.TreeListColumn newAddObjNm;
-        private DevExpress.XtraTreeList.Columns.TreeListColumn newAddVersion;
-        private DevExpress.XtraTreeList.Columns.TreeListColumn newAddObjState;
-        private DevExpress.XtraTreeList.TreeList tlFolder2;
-        private DevExpress.XtraTreeList.Columns.TreeListColumn colFolder2;
-        private DevExpress.XtraEditors.SeparatorControl separatorControl1;
-        private DevExpress.XtraEditors.SimpleButton simpleButton1;
-        private DevExpress.Utils.Behaviors.BehaviorManager behaviorManager1;
-        private DevExpress.XtraEditors.SimpleButton simpleButton2;
+        private System.Windows.Forms.Panel pnlTopMenu;
+        private System.Windows.Forms.Button btnRun;
+        private System.Windows.Forms.Button btnCheckIn;
+        private System.Windows.Forms.Button btnRefresh;
+        private System.Windows.Forms.SplitContainer splitContainer2;
+
+        // ★★★ 이 부분도 있는지 확인해주세요! ★★★
+        private BrightIdeasSoftware.TreeListView tlvFolder2;
+        private BrightIdeasSoftware.TreeListView newAddGrid;
+
+        private System.Windows.Forms.Panel pnlSystemHeader2;
+        private System.Windows.Forms.Label lblSystemTitle2;
+        private System.Windows.Forms.Panel pnlTopMenu2;
+        private System.Windows.Forms.Button btnUpload;
+        private System.Windows.Forms.Button btnCheckOut;
+        private System.Windows.Forms.StatusStrip status;
+        private System.Windows.Forms.ToolStripStatusLabel statusLabel;
+
+        // [추가] 로컬 폴더 영역 컨트롤
+        private System.Windows.Forms.SplitContainer splitContainer3;
+        private BrightIdeasSoftware.TreeListView tlvLocalFolder;
+        private System.Windows.Forms.Panel pnlLocalHeader;
+        private System.Windows.Forms.Button btnLocalFolderSelect;
+        private System.Windows.Forms.Label lblLocalTitle;
+        private System.Windows.Forms.Button resetGrid;
+        private System.Windows.Forms.Button rowAdd;
     }
 }

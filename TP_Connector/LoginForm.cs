@@ -1,18 +1,10 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Web.Services;
-using DevExpress.XtraEditors;
 using System.Windows.Forms;
-using static TP_Connector.common;
+using static TP_Connector.common; // 기존 common 클래스 참조
 
 namespace TP_Connector
 {
-    public partial class LoginForm : DevExpress.XtraEditors.XtraForm
+    public partial class LoginForm : Form
     {
         public LoginForm()
         {
@@ -21,19 +13,23 @@ namespace TP_Connector
 
         private void LoginForm_Load(object sender, EventArgs e)
         {
+            // 레지스트리에서 정보 가져오기
             ServerIP.Text = common.GetRegData("ServerIP");
             ServerPort.Text = common.GetRegData("ServerPort");
             UserID.Text = common.GetRegData("UserId");
-            UserID.Select(0, -1);
-            UserPwd.Select(0, -1);
 
-            if (ServerIP.Text == "")
+            // 텍스트 전체 선택 (표준 WinForms 방식)
+            UserID.SelectAll();
+            UserPwd.SelectAll();
+
+            // 포커스 설정
+            if (string.IsNullOrEmpty(ServerIP.Text))
                 this.ActiveControl = ServerIP;
-            else if (ServerPort.Text == "")
+            else if (string.IsNullOrEmpty(ServerPort.Text))
                 this.ActiveControl = ServerPort;
-            else if (UserID.Text == "")
+            else if (string.IsNullOrEmpty(UserID.Text))
                 this.ActiveControl = UserID;
-            else if (UserPwd.Text == "")
+            else if (string.IsNullOrEmpty(UserPwd.Text))
                 this.ActiveControl = UserPwd;
         }
 
@@ -44,31 +40,35 @@ namespace TP_Connector
             try
             {
                 common.ConnnectService(url);
-                // Check User/Pwd
+
+                // 로그인 체크 로직 (기존 유지)
                 bool lcheck = true;
 
                 if (lcheck == false)
                 {
                     common.DisConnectService();
-                    XtraMessageBox.Show("웹서비스에 연결할수가 없습니다. " + url);
+                    MessageBox.Show("웹서비스에 연결할수가 없습니다.\n" + url, "오류", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     return -1;
                 }
                 else
                 {
                     string localIP = common.GetLocalIPAddr();
+                    // 웹서비스 호출 (기존 참조 유지)
                     AddInWebService.AddinImplService intf = common.GetService();
                     AddInWebService.userVO userInfo = intf.loginProcess(userid, pwd, "0002", localIP);
 
                     if (userInfo == null)
                     {
-                        XtraMessageBox.Show("로그인하지 못했습니다");
+                        MessageBox.Show("로그인하지 못했습니다", "실패", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                         common.DisConnectService();
                         return -1;
                     }
 
+                    // 전역 변수 설정
                     GlobalClientService.userInfo = userInfo;
                     GlobalClientService.loginIP = localIP;
 
+                    // 성공 시 정보 저장
                     common.SetRegData("", "ServerIP", server);
                     common.SetRegData("", "ServerPort", port);
                     common.SetRegData("", "UserId", userid);
@@ -79,56 +79,54 @@ namespace TP_Connector
             catch (Exception se)
             {
                 common.DisConnectService();
-                XtraMessageBox.Show(se.Message.ToString());
+                MessageBox.Show(se.Message, "예외 발생", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return -1;
             }
         }
 
         private void LoginBtn_Click(object sender, EventArgs e)
         {
-            if (ServerIP.Text == "")
+            // 유효성 검사
+            if (string.IsNullOrEmpty(ServerIP.Text))
             {
-                XtraMessageBox.Show("서버 IP 또는 서버 이름을 입력하십시요");
+                MessageBox.Show("서버 IP 또는 서버 이름을 입력하십시요", "알림");
+                ServerIP.Focus();
                 return;
             }
 
-            if (ServerPort.Text == "")
+            if (string.IsNullOrEmpty(ServerPort.Text))
             {
-                XtraMessageBox.Show("서버 포트를 입력하십시요");
+                MessageBox.Show("서버 포트를 입력하십시요", "알림");
+                ServerPort.Focus();
                 return;
             }
 
-
-            if (UserID.Text == "")
+            if (string.IsNullOrEmpty(UserID.Text))
             {
-                XtraMessageBox.Show("사용자 ID를 입력하십시요");
+                MessageBox.Show("사용자 ID를 입력하십시요", "알림");
+                UserID.Focus();
                 return;
             }
 
-            if (UserPwd.Text == "")
+            if (string.IsNullOrEmpty(UserPwd.Text))
             {
-                XtraMessageBox.Show("암호를 입력하십시요");
+                MessageBox.Show("암호를 입력하십시요", "알림");
+                UserPwd.Focus();
                 return;
             }
 
+            // 로그인 시도
             if (LoginProc(ServerIP.Text, ServerPort.Text, UserID.Text, UserPwd.Text) != 0)
                 return;
 
-            XtraMessageBox.Show("로그인 하였습니다.");
+            MessageBox.Show("로그인 하였습니다.", "성공", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
-            DialogResult = DialogResult.Yes;
-
+            this.DialogResult = DialogResult.Yes;
             this.Close();
-
-
-            //이후 폼전환은 program.cs에서 진행
-
-
         }
 
         private void CancelBtn_Click(object sender, EventArgs e)
         {
-            //this.Close();
             Application.Exit();
         }
     }
